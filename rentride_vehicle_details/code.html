@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>RentRide - Commercial Vehicle Rental</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-high":"#e2e7ff","error-container":"#ffdad6","on-surface":"#131b2e","surface-container":"#eaedff","primary-fixed":"#d5e3ff","on-secondary":"#ffffff","outline-variant":"#c4c6cf","on-tertiary":"#ffffff","surface-container-low":"#f2f3ff","on-primary-fixed-variant":"#30476a","primary-fixed-dim":"#b0c8f1","surface-container-lowest":"#ffffff","surface-tint":"#485f83","surface":"#faf8ff","surface-dim":"#d2d9f4","surface-bright":"#faf8ff","tertiary-container":"#00301e","inverse-surface":"#283044","secondary":"#006398","on-background":"#131b2e","primary-container":"#0f294a","on-primary-container":"#7a91b7","surface-variant":"#dae2fd","secondary-fixed-dim":"#93ccff","surface-container-highest":"#dae2fd","tertiary-fixed-dim":"#4edea3","inverse-primary":"#b0c8f1","on-error":"#ffffff","secondary-fixed":"#cce5ff","on-surface-variant":"#44474e","on-secondary-fixed-variant":"#004b73","on-secondary-fixed":"#001d31","outline":"#74777f","on-primary-fixed":"#001b3b","primary":"#00142f","on-error-container":"#93000a","error":"#ba1a1a","on-tertiary-fixed-variant":"#005236","on-tertiary-container":"#00a472","secondary-container":"#5bb8fe","inverse-on-surface":"#eef0ff","on-tertiary-fixed":"#002113","background":"#faf8ff","tertiary-fixed":"#6ffbbe","on-primary":"#ffffff","on-secondary-container":"#00476e","tertiary":"#00190e"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-2xs":"0.25rem","margin-desktop":"2rem","margin-mobile":"1rem","space-sm":"0.75rem","space-xl":"2rem","space-xs":"0.5rem","gutter-mobile":"1rem","space-lg":"1.5rem","space-3xl":"4rem","space-2xl":"3rem","gutter-desktop":"1.5rem","space-md":"1rem"},fontFamily:{"label-lg":["Inter"],"body-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"],"body-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-md":["Plus Jakarta Sans"]},fontSize:{"label-lg":["15px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}],"headline-lg-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"700"}],"body-sm":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-xl":["44px",{lineHeight:"52px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-xl-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-md":["16px",{lineHeight:"24px",fontWeight:"400"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-surface-container"><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop"><div class="h-20 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm shrink-0"><a class="flex items-center gap-space-xs" data-path="home" href="#"><img alt="RentRide Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VK2hbgXVsXou5iDw15gKRL3FnTpdhN8HgT9bo_W8N2PfCABzb2aliZ3PPuhqaYe6XBHQRENH0jpQcnENDCTZcHAiKdPt1Eo4KDJTwx0iPHnn6pCJ2bSdrfOC4hsNlZ0fDj2_6d0cExTtct65VNuFXJ5N72CvCeOpc8I0qYAABP5cISF2HaQ-aY_33td8CgnHyoqB0JnB7GoEVvef1IFpt0iJsKOSeRFRCWHOGu6TKEJHlkMvoDPkoDmRE"/><span class="font-headline-md text-headline-sm tracking-tight text-primary font-bold">RentRide</span></a></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-secondary font-bold"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a aria-current="page" class="transition-colors text-secondary font-bold" data-path="vehicles" href="#">Vehicles</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="how-it-works" href="#">How It Works</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#">Dashboard</a></nav><div class="flex items-center gap-space-sm"><div class="hidden lg:flex items-center gap-space-xs text-on-surface-variant px-space-xs py-space-2xs bg-surface-container-low rounded-lg"><span class="material-symbols-outlined text-[18px] text-secondary">support_agent</span><div class="flex flex-col text-left leading-tight"><span class="font-label-sm text-[10px] uppercase text-outline">24/7 Hotline</span><a class="font-label-md text-[12px] font-semibold text-on-surface hover:text-secondary" href="tel:+18007368743">+1 800-RENTRIDE</a></div></div><div class="hidden md:flex items-center gap-space-2xs px-space-xs py-space-xs bg-surface-container-lowest border border-surface-container rounded-lg text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">language</span><span class="font-label-md text-[12px] text-on-surface font-medium">USD</span><span class="text-outline text-[12px]">/</span><span class="material-symbols-outlined text-[16px]">location_on</span><span class="font-label-md text-[12px] text-on-surface font-medium">NYC</span></div><div class="hidden sm:flex items-center gap-space-xs"><a class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-primary hover:bg-surface-container transition-colors" data-path="login" href="#">Log In</a><a class="px-space-md py-space-xs rounded-lg font-label-lg text-label-lg bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary transition-colors shadow-sm" data-path="sign-up" href="#">Sign Up</a></div><div class="flex items-center gap-space-xs pl-space-2xs border-l border-surface-container"><a class="relative flex items-center justify-center p-0.5 rounded-full ring-2 ring-transparent hover:ring-secondary transition-all" data-path="user-profile" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWRvgv7pP9uwSCFRW4yP55Q6c963FPgV7SwPO8qIXzJ7zTMZIrvcsU6VvWWl-hmjWf9IBQF1ToBSyLdn-cprOIpqkY7uSrRzn1sWQXuqrlo0KSeDHiEcDK2W0wM4jXNPnpeKEscV60mhpikUugTwafaEbbI6_7cXPtFbSXsOaxe-veAul2CDZucXA3CQsMTiNT-mcKoDzWdw1oiDHUL-b1mrpegPsNtLTGYy3RMkI1jmHtJ26V9j_M"/></a></div></div></div></div></header><main class="w-full pt-20 bg-background flex-1"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Quick Anchor Nav -->
+<section class="w-full bg-surface-container-lowest border-none py-space-sm">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<a class="hover:text-secondary transition-colors flex items-center gap-1" data-path="home" href="#">
+<span class="material-symbols-outlined text-[18px]">home</span>
+<span>Home</span>
+</a>
+<span class="text-outline-variant select-none">/</span>
+<a class="hover:text-secondary transition-colors" data-path="vehicles" href="#">Vehicles</a>
+<span class="text-outline-variant select-none">/</span>
+<a class="hover:text-secondary transition-colors" data-path="vehicles" href="#">Compact SUVs</a>
+<span class="text-outline-variant select-none">/</span>
+<span aria-current="page" class="text-on-surface font-semibold truncate">Tata Nexon XZ+</span>
+</nav>
+</div>
+</section>
+<!-- Vehicle Header Overview -->
+<section class="w-full bg-surface-container-lowest pb-space-lg">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-space-xs py-1 rounded-full bg-surface-container-high text-on-primary-fixed-variant font-label-sm text-label-sm uppercase tracking-wider font-bold">
+              Compact SUV
+            </span>
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              4.9 (210 verified reviews)
+            </span>
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+              Fleet Unit #RR-4092
+            </span>
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded-full bg-tertiary-fixed text-tertiary-container font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[15px]">bolt</span>
+              Instant Confirmation
+            </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight">
+            Tata Nexon XZ+ Dual Tone
+          </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Next-Gen Turbo Diesel Urban Explorer with 5-Star Safety &amp; Elevated Ground Clearance
+          </p>
+</div>
+<!-- Header Actions: Share & Save -->
+<div class="flex items-center gap-space-xs shrink-0 self-start md:self-end">
+<button class="flex items-center gap-1 px-space-sm py-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">share</span>
+<span>Share</span>
+</button>
+<button class="flex items-center gap-1 px-space-sm py-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+<span>Save</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Split Canvas -->
+<section class="w-full py-space-xl bg-background">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT COLUMN: Vehicle Details (~65% - 8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-xl min-w-0">
+<!-- Vehicle Image Gallery Block -->
+<div class="flex flex-col gap-space-sm bg-surface-container-lowest p-space-md rounded-2xl shadow-sm">
+<div class="relative w-full aspect-[16/9] overflow-hidden rounded-xl bg-surface-container">
+<img alt="Tata Nexon XZ+ Front Three Quarter" class="w-full h-full object-cover transition-all duration-300 hover:scale-[1.02]" data-alt="Photorealistic commercial automotive exterior shot of a sleek modern Tata Nexon compact SUV in striking Foliage Green with an contrasting Sonic Silver dual-tone floating roof. Shot outdoors in clean afternoon daylight on wet asphalt in front of clean architecture, high contrast, glossy finish, cinematic lighting, sharp focus." id="main-vehicle-display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArtwBzOSSnE54ObOXhBv1P_HwMQ_hAneUgh7UrHu0HRP54UilZbPGf4Y8T_383xuryG6vZ3KqsKj7Klj-rbOi7X-fnkaCcpJ1W_0fXB6d93NdHFpDpbf_-jrK1_PyS_gGZ4tdYUbxwklr0oFiOpkzJ1Y6y9ejofD1dGtikPQjZF7nuMXTrz3ScFR6J2WqV90fEmovGbeurJuS6NAr9GewNSsPr3gBmZEV_W2TSJ3bnb-V2ki_r6tpA"/>
+<div class="absolute top-space-sm left-space-sm flex items-center gap-space-xs">
+<span class="px-space-sm py-1 bg-primary/90 text-on-primary font-label-sm text-label-sm rounded-md backdrop-blur-sm">
+                  Dual Tone Foliage Green &amp; Silver
+                </span>
+<span class="px-space-xs py-1 bg-surface-container-lowest/90 text-primary font-label-sm text-label-sm rounded-md backdrop-blur-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">workspace_premium</span>
+                  Top Spec
+                </span>
+</div>
+<button class="absolute bottom-space-sm right-space-sm flex items-center gap-1.5 px-space-sm py-space-xs bg-surface-container-lowest/95 text-on-surface font-label-md text-label-md rounded-lg shadow-md hover:bg-surface-container transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+<span>View All 24 Photos</span>
+</button>
+</div>
+<!-- Thumbnail Selector Strip -->
+<div class="grid grid-cols-4 gap-space-xs md:gap-space-sm">
+<button class="relative aspect-[16/10] rounded-lg overflow-hidden bg-surface-container hover:opacity-90 transition-all focus:outline-none ring-2 ring-secondary" onclick="document.getElementById('main-vehicle-display').src='placeholder'" type="button">
+<img alt="Front 3/4 Exterior View" class="w-full h-full object-cover" data-alt="Detailed close-up front three-quarter view of the Tata Nexon XZ+ SUV showing sharp LED projector headlamps, signature tri-arrow front grille, and sporty fog lamp clusters in bright daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKmVDbC50XgfloeuaB3ra5tIX7c83N9zZz-SqAfKEBUgnvV6HqRN2HPLG7IWGSNQAaxOmUvfQ1YlD86h0wrHf1qkFJoLpnKW3QcTGYOZggOQT4Fl5lZW7WdsWBnJ8xcWz8wOVQAiB_GKHowWSXF1F-3GvDiDMzoBctA4ath86aOHSFgfLomxYgPMv7c232juUSXVvN0-frnv5xoB1F4Cu3ClCNnLvZSLJpyAuJbA7TmgXSF-aAv3qm"/>
+<div class="absolute inset-0 bg-primary/10"></div>
+<span class="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-primary/80 text-on-primary text-[10px] font-label-sm uppercase font-bold">Front</span>
+</button>
+<button class="relative aspect-[16/10] rounded-lg overflow-hidden bg-surface-container hover:opacity-90 transition-all focus:outline-none" onclick="document.getElementById('main-vehicle-display').src='placeholder'" type="button">
+<img alt="Cabin and Dashboard View" class="w-full h-full object-cover" data-alt="Interior luxury cockpit view of Tata Nexon dual tone dashboard showing digital driver display cluster, 7-inch floating touchscreen infotainment, leather-wrapped flat bottom steering wheel, and dual tone climate controls." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5x-cuTIt_FRvy_3wIhKyI5l2kpWqt0mbc4mLgS0ocJWqLwu0rRh-7RLejjcc2YfpdC-Bfipy-cizwWPXtqcxIL_dWsi51u8EyNeuwBSGQTdHvpTus30eaz2IZ9BodMHgM2zQJRDtB_0W6GcvQcvDS-46G_mBgY7yyJLiA4AeDlrpSxybh6UDL6V2p00eiagnwmiHOp-tW9ROkgv-RhCbYYVFy5bRy4IGGK5TBzaalSDAyM2HGfKDj"/>
+<span class="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-primary/80 text-on-primary text-[10px] font-label-sm uppercase font-bold">Interior</span>
+</button>
+<button class="relative aspect-[16/10] rounded-lg overflow-hidden bg-surface-container hover:opacity-90 transition-all focus:outline-none" onclick="document.getElementById('main-vehicle-display').src='placeholder'" type="button">
+<img alt="Boot and Luggage Cargo Space" class="w-full h-full object-cover" data-alt="Spacious rear cargo trunk view of the Tata Nexon XZ+ displaying 350 liters capacity with three upright travel suitcases neatly placed, showing flat load lip and neat acoustic rear shelf." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtt3H4lyhHRB8WG_kWB6FdTMopvFs1_XUlp9nhrIv_6UHCzwNyZ2coCfWztoznem6o7B7ypHFg8QMty_fne2XV9rTdfDaLWFx41pflqhHeL3uaS57P2GR8LIn21sz9Mfnesh63xnKFyrp-CNnIIkQ6y9vvcjWyg8AvYal9atZ3h36CXy-QWSp5mtsOWm64LsY4oBUkKJDrBn6FGxm9Jz04mbtMmAHbl3-sP2-OAEy4xL-0PSDUbbak"/>
+<span class="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-primary/80 text-on-primary text-[10px] font-label-sm uppercase font-bold">Boot (350L)</span>
+</button>
+<button class="relative aspect-[16/10] rounded-lg overflow-hidden bg-surface-container hover:opacity-90 transition-all focus:outline-none" onclick="document.getElementById('main-vehicle-display').src='placeholder'" type="button">
+<img alt="Side Profile View" class="w-full h-full object-cover" data-alt="Complete dynamic side profile of the Tata Nexon dual tone compact SUV parked beside an urban modern glass pavilion, showcasing 16-inch diamond cut alloy wheels, 209mm ground clearance, and sleek roof rails." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDos-0ywF3GXZ5TvAaCKpc-1OWDmXQi2KLkbD0pmipVABVkJ8tYt__XJwMG20w__gLKiJwdMGVIwqcVg0YtzkRgeFtJqmSez9fCp_uw4uEJet0-5b33nYMc2kKhX799GtVMJAm3_X1cRxlqnL0GIrEwLZXrb3_2wZPQ7ms6Un8elLtfEIOQ4ZYOIxFg19T7DPMzarNi8QcA704Cpg78kGOBuUh5zWDCRfAYFLdbO7JxiKxtARmXng7"/>
+<span class="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-primary/80 text-on-primary text-[10px] font-label-sm uppercase font-bold">Profile</span>
+</button>
+</div>
+</div>
+<!-- Technical Specs Grid Block -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[26px]">tune</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Vehicle Specifications</h2>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">OEM Certified</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-md pt-space-xs">
+<!-- Spec 1: Fuel -->
+<div class="flex flex-col gap-1 p-space-sm rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-secondary">local_gas_station</span>
+<span class="font-label-sm text-label-sm uppercase font-medium">Fuel Type</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">Diesel</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Ultra-low BS6 emission</span>
+</div>
+<!-- Spec 2: Transmission -->
+<div class="flex flex-col gap-1 p-space-sm rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-secondary">swap_driving_apps_wheel</span>
+<span class="font-label-sm text-label-sm uppercase font-medium">Transmission</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">6-Speed AMT</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Automatic + Tiptronic</span>
+</div>
+<!-- Spec 3: Seating -->
+<div class="flex flex-col gap-1 p-space-sm rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-secondary">airline_seat_recline_normal</span>
+<span class="font-label-sm text-label-sm uppercase font-medium">Seating</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">5 Adults</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">ISOFIX Child Anchors</span>
+</div>
+<!-- Spec 4: Mileage -->
+<div class="flex flex-col gap-1 p-space-sm rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-secondary">speed</span>
+<span class="font-label-sm text-label-sm uppercase font-medium">Efficiency / Range</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">21.0 km/l</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Highway ~880 km/tank</span>
+</div>
+<!-- Spec 5: Engine -->
+<div class="flex flex-col gap-1 p-space-sm rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-secondary">engineering</span>
+<span class="font-label-sm text-label-sm uppercase font-medium">Engine &amp; Power</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">1.5L Turbo</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Revotorq (115 PS / 260 Nm)</span>
+</div>
+<!-- Spec 6: Luggage -->
+<div class="flex flex-col gap-1 p-space-sm rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-secondary">luggage</span>
+<span class="font-label-sm text-label-sm uppercase font-medium">Cargo Space</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">350 Liters</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Fits 3 Large Luggage Bags</span>
+</div>
+</div>
+</div>
+<!-- Included Key Features Checklist -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[26px]">fact_check</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Key Included Features</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Every Tata Nexon XZ+ in the RentRide commercial fleet is equipped with premium comfort, telematics, and active security packages.
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm pt-space-xs">
+<!-- Feature 1 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low">
+<div class="p-2 rounded-lg bg-surface-container-lowest text-secondary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">ac_unit</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Dual-Zone Climate Control</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Automatic temperature air conditioner with dedicated rear console vents.</span>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low">
+<div class="p-2 rounded-lg bg-surface-container-lowest text-secondary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">stay_current_portrait</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Touchscreen Infotainment</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Wireless Apple CarPlay &amp; Android Auto integration with 8-speaker audio.</span>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low">
+<div class="p-2 rounded-lg bg-surface-container-lowest text-secondary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">share_location</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">GPS Navigation &amp; Telematics</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Real-time live fleet GPS tracking, geofencing assistance, and SOS direct call.</span>
+</div>
+</div>
+<!-- Feature 4 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low">
+<div class="p-2 rounded-lg bg-surface-container-lowest text-secondary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">High-Speed USB-C Hub</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">45W rapid device charging sockets in both front driver well and passenger rear.</span>
+</div>
+</div>
+<!-- Feature 5 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low">
+<div class="p-2 rounded-lg bg-surface-container-lowest text-secondary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">shield</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">5-Star Safety Shield</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Global NCAP 5-Star rated chassis, 6 airbags, ABS with EBD, and active ESP.</span>
+</div>
+</div>
+<!-- Feature 6 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low">
+<div class="p-2 rounded-lg bg-surface-container-lowest text-secondary shrink-0 border-none shadow-sm">
+<span class="material-symbols-outlined text-[22px]">speed</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Cruise &amp; Rear Camera</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Steering-mounted cruise control &amp; high-definition reverse camera with guidelines.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Rental Requirements & Policy Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Requirements Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-secondary text-[24px]">assignment</span>
+<h3 class="font-headline-sm text-headline-sm font-bold">Renter Requirements</h3>
+</div>
+<ul class="flex flex-col gap-space-xs pt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim shrink-0">check_circle</span>
+<span>Minimum driver age: <strong>21 years</strong> with valid driving license held min. 1 year.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim shrink-0">check_circle</span>
+<span>Original government-issued photo ID (Passport / State ID).</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim shrink-0">check_circle</span>
+<span>Valid Credit or Debit card in primary driver's matching name.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">info</span>
+<span>Refundable deposit: <strong>$150</strong> (Immediately refunded or waived with Shield+).</span>
+</li>
+</ul>
+</div>
+<!-- Cancellation & Refund Policy -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-secondary text-[24px]">published_with_changes</span>
+<h3 class="font-headline-sm text-headline-sm font-bold">Cancellation Policy</h3>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-on-tertiary-container font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>100% Free Cancellation</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Cancel up to 24 hours prior to scheduled pickup for a full instant refund.
+                </p>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-1">
+                Automatic payment returns process straight to your original method within 3-5 business days without deduction or processing fees.
+              </p>
+</div>
+</div>
+<!-- Pickup Location & Keyless Locker Station -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[26px]">pin_drop</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Pickup &amp; Return Station</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Downtown Manhattan Hub, 450 Hudson St, New York, NY 10014</p>
+</div>
+</div>
+<span class="px-space-sm py-1 rounded-full bg-tertiary-fixed text-tertiary-container font-label-sm text-label-sm font-bold shrink-0 self-start sm:self-auto">
+                24/7 Keyless Handover
+              </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-stretch">
+<!-- Location Map Element -->
+<div class="md:col-span-8 h-64 rounded-xl overflow-hidden shadow-inner relative" data-location="450 Hudson St, New York, NY 10014" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAR64D0pLXBsKt8Pi9VpdVP7tlYYM4RBKVgebXm8jtFkPwIc24F0WMTeBovO3_osQGq4HES3C-ry1cjnEed01rfmJ0aii-F3ZN-qzKHy8yaJqmaVJptAJKAoiqeTylHI11y3RV9hEjJnV0PRn7jscp11XZFGoGxiTgHYiH073C6_KAR8y66DUupN-V9iBWQByvz5JJz2cnAeA-uyYvg0ACRjJUSEsNSdThOua951U5zjwSNvlKUVUEC')">
+<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+<div class="absolute bottom-3 left-3 bg-surface-container-lowest/95 backdrop-blur-sm p-space-xs px-space-sm rounded-lg shadow-md flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">directions_car</span>
+<div class="flex flex-col text-left">
+<span class="font-label-md text-label-md font-bold text-primary">RentRide Secure Locker Bay 4</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">B1 Parking Level • Follow blue signage</span>
+</div>
+</div>
+</div>
+<!-- Station Details Card -->
+<div class="md:col-span-4 bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">Locker Protocol</span>
+<h4 class="font-headline-sm text-[16px] font-bold text-primary">Instant Mobile Unlock</h4>
+<p class="font-body-sm text-[13px] text-on-surface-variant">
+                    Use your RentRide App key or numerical PIN received via SMS 30 minutes before your reserved departure slot.
+                  </p>
+</div>
+<div class="flex flex-col gap-2 pt-space-xs">
+<a class="w-full flex items-center justify-center gap-2 py-space-xs px-space-sm bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors" href="https://maps.google.com" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[16px]">navigation</span>
+<span>Get Directions</span>
+</a>
+<span class="text-center font-body-sm text-[11px] text-on-surface-variant">MTA 1 &amp; PATH Trains within 3 min walk</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Fleet Availability Calendar Strip -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">calendar_month</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Fleet Availability Window</h3>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim"></span>
+<span>Available</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-dim"></span>
+<span>Reserved</span>
+</div>
+</div>
+</div>
+<!-- Calendar Days Row -->
+<div class="grid grid-cols-7 gap-1 sm:gap-2 pt-space-xs text-center">
+<div class="p-2 sm:p-3 rounded-xl bg-surface-container flex flex-col items-center gap-1">
+<span class="font-label-sm text-[11px] text-on-surface-variant">THU 23</span>
+<span class="font-label-md text-label-md font-bold text-primary">23</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+</div>
+<div class="p-2 sm:p-3 rounded-xl bg-primary-container text-on-primary flex flex-col items-center gap-1 shadow-sm">
+<span class="font-label-sm text-[11px] text-on-primary-container">FRI 24</span>
+<span class="font-label-md text-label-md font-bold">24</span>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+</div>
+<div class="p-2 sm:p-3 rounded-xl bg-primary-container text-on-primary flex flex-col items-center gap-1 shadow-sm">
+<span class="font-label-sm text-[11px] text-on-primary-container">SAT 25</span>
+<span class="font-label-md text-label-md font-bold">25</span>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+</div>
+<div class="p-2 sm:p-3 rounded-xl bg-primary-container text-on-primary flex flex-col items-center gap-1 shadow-sm">
+<span class="font-label-sm text-[11px] text-on-primary-container">SUN 26</span>
+<span class="font-label-md text-label-md font-bold">26</span>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+</div>
+<div class="p-2 sm:p-3 rounded-xl bg-primary-container text-on-primary flex flex-col items-center gap-1 shadow-sm">
+<span class="font-label-sm text-[11px] text-on-primary-container">MON 27</span>
+<span class="font-label-md text-label-md font-bold">27</span>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+</div>
+<div class="p-2 sm:p-3 rounded-xl bg-surface-container flex flex-col items-center gap-1">
+<span class="font-label-sm text-[11px] text-on-surface-variant">TUE 28</span>
+<span class="font-label-md text-label-md font-bold text-primary">28</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+</div>
+<div class="p-2 sm:p-3 rounded-xl bg-surface-container-low opacity-60 flex flex-col items-center gap-1">
+<span class="font-label-sm text-[11px] text-on-surface-variant">WED 29</span>
+<span class="font-label-md text-label-md font-bold text-on-surface-variant">29</span>
+<span class="w-2 h-2 rounded-full bg-surface-dim"></span>
+</div>
+</div>
+<p class="font-body-sm text-[13px] text-on-surface-variant">Selected rental dates: <span class="font-bold text-primary">Oct 24, 2025 to Oct 27, 2025</span> (Vehicle reserved exclusively for this itinerary).</p>
+</div>
+</div>
+<!-- RIGHT COLUMN: Sticky Reservation Module (~35% - 4 cols) -->
+<aside class="lg:col-span-4 w-full lg:sticky lg:top-24">
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-xl flex flex-col gap-space-md border-t-4 border-secondary">
+<!-- Price Block -->
+<div class="flex items-baseline justify-between pb-space-xs border-b border-surface-container">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl font-extrabold text-primary">$58</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/ day</span>
+<span class="font-body-sm text-body-sm text-outline line-through">$68</span>
+</div>
+<div class="flex items-center gap-1 px-space-xs py-1 rounded-md bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">
+                15% OFF
+              </div>
+</div>
+<!-- Quick Trip Rating Badge -->
+<div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-primary">4.9</span>
+<span class="text-on-surface-variant">• 210 trips completed</span>
+</div>
+<span class="text-on-tertiary-container font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[16px]">verified</span> Top Tier
+              </span>
+</div>
+<!-- Booking Input Form Container -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<!-- Pickup Location Field -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Pickup Station</label>
+<div class="flex items-center gap-space-xs p-space-xs px-space-sm bg-surface-container-low rounded-xl text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">location_on</span>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-label-md font-bold truncate">Downtown Manhattan Hub</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant truncate">450 Hudson St, New York</span>
+</div>
+</div>
+</div>
+<!-- Return Location Toggle -->
+<div class="flex items-center gap-2 px-1">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-secondary cursor-pointer" id="same-location" type="checkbox"/>
+<label class="font-label-md text-label-md text-on-surface cursor-pointer select-none" for="same-location">
+                  Return to the same station
+                </label>
+</div>
+<!-- Pickup & Return Date Inputs -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Pickup</label>
+<div class="p-space-xs bg-surface-container-low rounded-xl flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary">Oct 24, 2025</span>
+<span class="font-body-sm text-[12px] text-secondary font-semibold">10:00 AM</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Return</label>
+<div class="p-space-xs bg-surface-container-low rounded-xl flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary">Oct 27, 2025</span>
+<span class="font-body-sm text-[12px] text-secondary font-semibold">06:00 PM</span>
+</div>
+</div>
+</div>
+<!-- Trip Duration Calculated Pill -->
+<div class="flex items-center justify-center gap-1.5 py-1.5 px-space-sm bg-surface-container rounded-lg text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span>Calculated Duration: <strong>3 Days, 8 Hours</strong></span>
+</div>
+</div>
+<!-- Price Breakdown Calculation -->
+<div class="flex flex-col gap-2 pt-space-xs border-t border-surface-container">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Fare Breakdown</span>
+<div class="flex justify-between items-center font-body-sm text-body-sm text-on-surface">
+<span>Base Rental ($58.00 × 3 days)</span>
+<span class="font-semibold text-primary">$174.00</span>
+</div>
+<div class="flex justify-between items-center font-body-sm text-body-sm text-on-surface">
+<span class="flex items-center gap-1">
+                  Collision Damage Waiver (CDW)
+                  <span class="material-symbols-outlined text-[15px] text-outline" title="Standard zero deductible protection">info</span>
+</span>
+<span class="font-bold text-tertiary-container">Included ($0)</span>
+</div>
+<div class="flex justify-between items-center font-body-sm text-body-sm text-on-surface">
+<span>State Highway Surcharge &amp; Tax</span>
+<span class="font-semibold text-primary">$18.40</span>
+</div>
+<div class="flex justify-between items-center font-body-sm text-body-sm text-on-surface">
+<span>Refundable Deposit</span>
+<span class="font-bold text-secondary">WAIVED ($0)</span>
+</div>
+<div class="pt-space-xs mt-1 border-t border-surface-container flex justify-between items-baseline">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-extrabold text-primary">Estimated Total</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Includes all mandatory taxes and cover</span>
+</div>
+<span class="font-headline-lg text-headline-lg font-black text-primary">$192.40</span>
+</div>
+</div>
+<!-- Main Booking CTA -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full py-space-sm px-space-md rounded-xl bg-primary text-on-primary font-headline-sm text-headline-sm font-bold shadow-lg hover:bg-primary-container transition-all flex items-center justify-center gap-2 group cursor-pointer" type="button">
+<span>Proceed to Book</span>
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<div class="flex flex-col gap-1.5 pt-space-xs text-center font-body-sm text-[12px] text-on-surface-variant">
+<div class="flex items-center justify-center gap-1 text-on-tertiary-container font-medium">
+<span class="material-symbols-outlined text-[16px]">lock_reset</span>
+<span>No payment charged until vehicle is inspected</span>
+</div>
+<div class="flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">history</span>
+<span>Free cancellation up to Oct 23, 10:00 AM</span>
+</div>
+</div>
+</div>
+<!-- Fleet Guarantee Micro-Pill -->
+<div class="p-space-xs bg-surface-container-low rounded-xl flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-label-sm font-bold text-primary">RentRide Clean &amp; Safe Promise</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Full interior sanitization &amp; 140-point safety check</span>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</section>
+<!-- Mobile Floating Action Bar for Conversion -->
+<div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-md p-space-sm shadow-2xl flex items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm font-black text-primary">$192.40</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">total (3d)</span>
+</div>
+<span class="font-label-sm text-[11px] text-on-tertiary-container font-semibold">Free cancellation</span>
+</div>
+<button class="py-space-xs px-space-md bg-primary text-on-primary rounded-xl font-label-lg text-label-lg font-bold shadow-md hover:bg-primary-container transition-colors flex items-center gap-1.5" type="button">
+<span>Book Nexon</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div></main><footer class="w-full bg-primary text-on-primary pt-space-3xl pb-space-xl border-t border-primary-container"><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl pb-space-2xl border-b border-primary-container"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary-fixed-dim text-[32px]">local_shipping</span><span class="font-headline-md text-headline-md text-on-primary font-bold tracking-tight">RentRide</span></div><p class="font-body-sm text-body-sm text-surface-variant max-w-sm">Premier commercial mobility solutions. Fleet management, heavy-duty logistics vans, motorbikes, and eco-mobility rentals for businesses and travelers worldwide.</p><div class="flex items-center gap-space-xs pt-space-xs"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-primary-container border border-outline/30 text-surface-bright"><span class="material-symbols-outlined text-tertiary-fixed text-[20px]">verified</span><div class="flex flex-col"><span class="font-label-sm text-[10px] text-surface-variant uppercase">Assistance</span><span class="font-label-md text-label-md font-semibold text-on-primary">24/7 Roadside Ready</span></div></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-primary-container border border-outline/30 text-surface-bright"><span class="material-symbols-outlined text-secondary-fixed text-[20px]">security</span><div class="flex flex-col"><span class="font-label-sm text-[10px] text-surface-variant uppercase">Security</span><span class="font-label-md text-label-md font-semibold text-on-primary">Insured &amp; Certified</span></div></div></div></div><div><h4 class="font-headline-sm text-[16px] text-on-primary mb-space-md uppercase tracking-wider">Fleet Categories</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-variant"><li class="hover:text-on-primary transition-colors"><a data-path="vehicles" href="#">Commercial Trucks</a></li><li class="hover:text-on-primary transition-colors"><a data-path="vehicles" href="#">Passenger Vans &amp; SUVs</a></li><li class="hover:text-on-primary transition-colors"><a data-path="vehicles" href="#">Urban Cargo Scooters</a></li><li class="hover:text-on-primary transition-colors"><a data-path="vehicles" href="#">Delivery Motorbikes</a></li><li class="hover:text-on-primary transition-colors"><a data-path="vehicles" href="#">Electric Fleets</a></li></ul></div><div><h4 class="font-headline-sm text-[16px] text-on-primary mb-space-md uppercase tracking-wider">Key Locations</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-variant"><li class="hover:text-on-primary transition-colors"><a data-path="vehicles" href="#">New York Metro</a></li><li class="hover:text-on-primary transition-colors"><a data-path="vehicles" href="#">Los Angeles Hub</a></li><li class="hover:text-on-primary transition-colors"><a data-path="vehicles" href="#">Chicago Center</a></li><li class="hover:text-on-primary transition-colors"><a data-path="vehicles" href="#">Miami Port Authority</a></li><li class="hover:text-on-primary transition-colors"><a data-path="vehicles" href="#">Dallas-Fort Worth</a></li></ul></div><div><h4 class="font-headline-sm text-[16px] text-on-primary mb-space-md uppercase tracking-wider">Compliance &amp; Trust</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-variant"><li class="hover:text-on-primary transition-colors"><a data-path="rental-policies" href="#">Rental Agreements</a></li><li class="hover:text-on-primary transition-colors"><a data-path="rental-policies" href="#">Commercial Insurance</a></li><li class="hover:text-on-primary transition-colors"><a data-path="rental-policies" href="#">Fleet Safety Specs</a></li><li class="hover:text-on-primary transition-colors"><a data-path="rental-policies" href="#">Privacy &amp; GDPR</a></li><li class="hover:text-on-primary transition-colors"><a data-path="rental-policies" href="#">Terms of Service</a></li></ul></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-surface-variant"><p>© 2025 RentRide Enterprise Mobility Inc. All rights reserved.</p><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px] hover:text-on-primary transition-colors cursor-pointer">public</span><span class="material-symbols-outlined text-[20px] hover:text-on-primary transition-colors cursor-pointer">share</span><span class="material-symbols-outlined text-[20px] hover:text-on-primary transition-colors cursor-pointer">mark_email_unread</span><span class="material-symbols-outlined text-[20px] hover:text-on-primary transition-colors cursor-pointer">pin_drop</span></div></div></div></footer></body></html>

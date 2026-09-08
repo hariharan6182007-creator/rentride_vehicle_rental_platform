@@ -1,0 +1,13 @@
+{
+  "name": "rentride-backend",
+  "version": "1.0.0",
+  "description": "Backend API for the RentRide vehicle rental UI",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

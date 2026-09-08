@@ -1,0 +1,567 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><title>RentRide - Fleet &amp; Booking Dashboard</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-high":"#e2e7ff","error-container":"#ffdad6","on-surface":"#131b2e","surface-container":"#eaedff","primary-fixed":"#d5e3ff","on-secondary":"#ffffff","outline-variant":"#c4c6cf","on-tertiary":"#ffffff","surface-container-low":"#f2f3ff","on-primary-fixed-variant":"#30476a","primary-fixed-dim":"#b0c8f1","surface-container-lowest":"#ffffff","surface-tint":"#485f83","surface":"#faf8ff","surface-dim":"#d2d9f4","surface-bright":"#faf8ff","tertiary-container":"#00301e","inverse-surface":"#283044","secondary":"#006398","on-background":"#131b2e","primary-container":"#0f294a","on-primary-container":"#7a91b7","surface-variant":"#dae2fd","secondary-fixed-dim":"#93ccff","surface-container-highest":"#dae2fd","tertiary-fixed-dim":"#4edea3","inverse-primary":"#b0c8f1","on-error":"#ffffff","secondary-fixed":"#cce5ff","on-surface-variant":"#44474e","on-secondary-fixed-variant":"#004b73","on-secondary-fixed":"#001d31","outline":"#74777f","on-primary-fixed":"#001b3b","primary":"#00142f","on-error-container":"#93000a","error":"#ba1a1a","on-tertiary-fixed-variant":"#005236","on-tertiary-container":"#00a472","secondary-container":"#5bb8fe","inverse-on-surface":"#eef0ff","on-tertiary-fixed":"#002113","background":"#faf8ff","tertiary-fixed":"#6ffbbe","on-primary":"#ffffff","on-secondary-container":"#00476e","tertiary":"#00190e"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-2xs":"0.25rem","margin-desktop":"2rem","margin-mobile":"1rem","space-sm":"0.75rem","space-xl":"2rem","space-xs":"0.5rem","gutter-mobile":"1rem","space-lg":"1.5rem","space-3xl":"4rem","space-2xl":"3rem","gutter-desktop":"1.5rem","space-md":"1rem"},fontFamily:{"label-lg":["Inter"],"body-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"],"body-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-md":["Plus Jakarta Sans"]},fontSize:{"label-lg":["15px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}],"headline-lg-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"700"}],"body-sm":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-xl":["44px",{lineHeight:"52px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-xl-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-md":["16px",{lineHeight:"24px",fontWeight:"400"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-surface-container z-50 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-lg"><div class="px-space-md flex items-center gap-space-xs"><a class="flex items-center gap-space-xs" data-path="home" href="#"><img alt="RentRide Brand Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VK2hbgXVsXou5iDw15gKRL3FnTpdhN8HgT9bo_W8N2PfCABzb2aliZ3PPuhqaYe6XBHQRENH0jpQcnENDCTZcHAiKdPt1Eo4KDJTwx0iPHnn6pCJ2bSdrfOC4hsNlZ0fDj2_6d0cExTtct65VNuFXJ5N72CvCeOpc8I0qYAABP5cISF2HaQ-aY_33td8CgnHyoqB0JnB7GoEVvef1IFpt0iJsKOSeRFRCWHOGu6TKEJHlkMvoDPkoDmRE"><span class="font-headline-sm text-[18px] text-primary font-bold">RentRide Ops</span></a></div><nav class="flex flex-col gap-space-2xs px-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold"><a aria-current="page" class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg transition-colors bg-primary-container text-on-primary-container font-bold" data-path="dashboard" href="#" style="background: linear-gradient(135deg, rgb(245, 124, 0) 0%, rgb(255, 87, 34) 100%); color: rgb(255, 255, 255); font-weight: 700; box-shadow: rgba(245, 124, 0, 0.25) 0px 4px 12px;"><span class="material-symbols-outlined text-[20px]">grid_view</span>Overview</a><a class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="booking-management" href="#"><span class="material-symbols-outlined text-[20px]">book_online</span>Active Bookings</a><a class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="fleet-inventory" href="#"><span class="material-symbols-outlined text-[20px]">garage_home</span>Fleet Inventory</a><a class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="telematics-tracking" href="#"><span class="material-symbols-outlined text-[20px]">satellite_alt</span>Live Telematics</a><a class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="billing-invoices" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span>Billing &amp; Invoices</a><a class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="user-profile" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span>Account Settings</a></nav></div><div class="px-space-xs"><div class="p-space-sm rounded-xl bg-surface-container-low border border-surface-container flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs text-secondary"><span class="material-symbols-outlined text-[18px]">headset_mic</span><span class="font-label-sm text-label-sm font-semibold">Fleet Dispatch</span></div><span class="font-body-sm text-[12px] text-on-surface-variant">Direct hotline: ext #419</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-md border-b border-surface-container z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-sm w-96"><div class="flex items-center gap-space-xs w-full px-space-sm py-space-xs bg-surface-container-low rounded-lg text-outline"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-[13px] text-outline">Search fleet ID, driver, or reservation...</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[20px] cursor-pointer hover:text-on-surface">notifications</span><span class="material-symbols-outlined text-[20px] cursor-pointer hover:text-on-surface">help</span></div><div class="h-6 w-[1px] bg-surface-container"></div><div class="flex items-center gap-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWRvgv7pP9uwSCFRW4yP55Q6c963FPgV7SwPO8qIXzJ7zTMZIrvcsU6VvWWl-hmjWf9IBQF1ToBSyLdn-cprOIpqkY7uSrRzn1sWQXuqrlo0KSeDHiEcDK2W0wM4jXNPnpeKEscV60mhpikUugTwafaEbbI6_7cXPtFbSXsOaxe-veAul2CDZucXA3CQsMTiNT-mcKoDzWdw1oiDHUL-b1mrpegPsNtLTGYy3RMkI1jmHtJ26V9j_M"><div class="hidden sm:flex flex-col"><span class="font-label-md text-label-md text-on-surface leading-tight font-semibold">Commercial Admin</span><span class="font-label-sm text-[10px] text-outline uppercase">Logistics Ops</span></div></div></div></header><main class="w-full pt-16 px-space-xl bg-background min-h-screen"><div class="flex flex-col w-full pb-space-3xl gap-space-xl">
+<!-- Operational Hub Overline Banner -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pt-space-xs">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">NYC Regional Operations Control · Hub #04</span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-headline-lg text-headline-lg text-primary">Fleet Command &amp; Telematics</span>
+<span class="font-label-md text-label-md px-space-xs py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container" style="background: rgba(245, 124, 0, 0.12); color: rgb(245, 124, 0); border: 1px solid rgba(245, 124, 0, 0.3); font-weight: 600;">Realtime Feed Live</span>
+</div>
+</div>
+<!-- Quick Dispatch Actions -->
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="flex items-center gap-space-2xs px-space-sm py-space-xs rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+        Export Fleet CSV
+      </button>
+<button class="flex items-center gap-space-2xs px-space-sm py-space-xs rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-secondary/90 transition-colors shadow-sm" style="background: rgb(245, 124, 0); color: rgb(255, 255, 255); box-shadow: rgba(245, 124, 0, 0.25) 0px 2px 6px;">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+        Dispatcher Rules
+      </button>
+<button class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary/90 transition-all shadow-md active:scale-95" style="background: linear-gradient(135deg, rgb(255, 87, 34) 0%, rgb(245, 124, 0) 100%); color: rgb(255, 255, 255); box-shadow: rgba(255, 87, 34, 0.35) 0px 4px 14px;">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+        Add New Vehicle
+      </button>
+</div>
+</div>
+<!-- 5 High-Impact KPI Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- KPI 1 -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Fleet Fleet Size</span>
+<div class="p-1.5 rounded-lg bg-surface-container-low text-secondary">
+<span class="material-symbols-outlined text-[20px]">directions_car</span>
+</div>
+</div>
+<div class="flex flex-col mt-space-sm">
+<span class="font-headline-md text-headline-md text-primary">142 Units</span>
+<div class="flex items-center gap-space-2xs mt-1 text-on-tertiary-container">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="font-label-sm text-label-sm">94% Operational</span>
+</div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Available Ready</span>
+<div class="p-1.5 rounded-lg bg-surface-container-low text-secondary">
+<span class="material-symbols-outlined text-[20px]">key</span>
+</div>
+</div>
+<div class="flex flex-col mt-space-sm">
+<span class="font-headline-md text-headline-md text-primary">38 Ready</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Staged across 3 hubs</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-primary-container text-on-primary-container shadow-md" style="background: linear-gradient(135deg, rgb(245, 124, 0) 0%, rgb(255, 87, 34) 100%); color: rgb(255, 255, 255); box-shadow: rgba(245, 124, 0, 0.3) 0px 8px 20px;">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-wider" style="color: rgb(255, 224, 178);">Active on Road</span>
+<div class="p-1.5 rounded-lg bg-surface-container-lowest/10 text-primary-fixed">
+<span class="material-symbols-outlined text-[20px]">fmd_good</span>
+</div>
+</div>
+<div class="flex flex-col mt-space-sm">
+<span class="font-headline-md text-headline-md text-on-primary">84 Vehicles</span>
+<div class="flex items-center gap-space-2xs mt-1 text-tertiary-fixed" style="color: rgb(255, 243, 224);">
+<span class="material-symbols-outlined text-[16px]">navigation</span>
+<span class="font-label-sm text-label-sm">71% Peak Utilization</span>
+</div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Returns Handled</span>
+<div class="p-1.5 rounded-lg bg-surface-container-low text-secondary">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+</div>
+</div>
+<div class="flex flex-col mt-space-sm">
+<span class="font-headline-md text-headline-md text-primary">19 Units</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Today's completed intake</span>
+</div>
+</div>
+<!-- KPI 5 -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Monthly Revenue</span>
+<div class="p-1.5 rounded-lg bg-surface-container-low text-secondary">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+</div>
+<div class="flex flex-col mt-space-sm">
+<span class="font-headline-md text-headline-md text-primary">$148,250</span>
+<div class="flex items-center gap-space-2xs mt-1 text-on-tertiary-container">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span class="font-label-sm text-label-sm">+18.4% vs last mo</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Realtime Telematics Health Advisory Banner -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center justify-center w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary-container" style="background: rgba(255, 87, 34, 0.12); color: rgb(255, 87, 34);">
+<span class="material-symbols-outlined text-[22px]">sensors</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-primary">Fleetwide Diagnostic Telematics</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse" style="background-color: rgb(255, 87, 34);"></span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">All 142 vehicle telematics reports normal, 0 safety violations detected across Manhattan, Brooklyn, &amp; JFK.</span>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-space-md">
+<div class="flex items-center gap-space-2xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">battery_charging_full</span>
+        EV Fleet: 91% Avg SoC
+      </div>
+<div class="flex items-center gap-space-2xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">speed</span>
+        Avg Speed: 23.4 mph
+      </div>
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors">
+        View Diagnostic Grid
+      </button>
+</div>
+</div>
+<!-- Analytics Grid: Fleet Utilization & Geo Dispersion -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left: Utilization Breakdown -->
+<div class="lg:col-span-7 flex flex-col justify-between p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">Fleet Segment Utilization</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Live occupancy against current deployed fleet volume</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-low px-space-xs py-1 rounded-lg">Target: &gt;75%</span>
+</div>
+<!-- Segment Progress Bars -->
+<div class="flex flex-col gap-space-md my-space-xs">
+<!-- Cars -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">directions_car</span>
+              Compact &amp; Sedans (52 units)
+            </span>
+<span class="font-bold text-primary">68%</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-low overflow-hidden">
+<div class="h-full bg-secondary rounded-full transition-all duration-500" style="width: 68%; background: linear-gradient(90deg, rgb(255, 183, 77), rgb(245, 124, 0));"></div>
+</div>
+</div>
+<!-- SUVs -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">airport_shuttle</span>
+              SUVs &amp; Commercials (44 units)
+            </span>
+<span class="font-bold text-primary">82%</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-low overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 82%; background: linear-gradient(90deg, rgb(245, 124, 0), rgb(255, 87, 34));"></div>
+</div>
+</div>
+<!-- Motorbikes -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">two_wheeler</span>
+              Cruisers &amp; Classic Bikes (26 units)
+            </span>
+<span class="font-bold text-primary">74%</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-low overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full transition-all duration-500" style="width: 74%; background: rgb(255, 152, 0);"></div>
+</div>
+</div>
+<!-- Urban Scooters -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">electric_scooter</span>
+              Electric Scooters (20 units)
+            </span>
+<span class="font-bold text-primary">89%</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-low overflow-hidden">
+<div class="h-full bg-tertiary-fixed-dim rounded-full transition-all duration-500" style="width: 89%; background: rgb(255, 87, 34);"></div>
+</div>
+</div>
+</div>
+<!-- Footer Micro-Stats -->
+<div class="grid grid-cols-3 gap-space-sm pt-space-md mt-space-sm bg-surface-container-low/60 p-space-sm rounded-xl">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Scheduled Turnarounds</span>
+<span class="font-headline-sm text-headline-sm text-primary">14 Due</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Under Maintenance</span>
+<span class="font-headline-sm text-headline-sm text-error">4 Bays</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Avg Turnaround Time</span>
+<span class="font-headline-sm text-headline-sm text-secondary">42 Min</span>
+</div>
+</div>
+</div>
+<!-- Right: Station Performance & Map Snippet -->
+<div class="lg:col-span-5 flex flex-col justify-between p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">Hub Live Deployments</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Metro terminal inventory levels</span>
+</div>
+<span class="material-symbols-outlined text-secondary">map</span>
+</div>
+<!-- Station List Cards -->
+<div class="flex flex-col gap-space-xs my-space-sm">
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary" style="background-color: rgb(245, 124, 0);"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Manhattan Flagship Hub</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Midtown West · 42 Vehicles</span>
+</div>
+</div>
+<span class="font-label-md text-label-md text-secondary font-bold">18 Ready</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<div class="w-2.5 h-2.5 rounded-full bg-primary-container" style="background-color: rgb(255, 87, 34);"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">JFK Terminal 4 Depot</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Queens Express · 60 Vehicles</span>
+</div>
+</div>
+<span class="font-label-md text-label-md text-secondary font-bold">12 Ready</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<div class="w-2.5 h-2.5 rounded-full bg-tertiary"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Brooklyn Navy Yard Station</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Dock 72 · 40 Vehicles</span>
+</div>
+</div>
+<span class="font-label-md text-label-md text-secondary font-bold">8 Ready</span>
+</div>
+</div>
+<!-- Realtime Map Dispatch Container -->
+<div class="w-full h-28 rounded-xl overflow-hidden bg-surface-container relative flex items-end p-space-xs" data-location="New York City, NY" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCIZTVWSSj9ZJUHvbW764FPNxUwnAgPie-MAsi6yG3NxcQ7a3L5RMbXVKcyeBWgp-XmL-eQ_gy6CF7IWNeHU-417OUU3p433J3ifsakp__9a8qZeMX7b3vnM_W7mwE2xf6klPC46g12I8bOUVHcN3h8E6xp49nNM_kHlJIJx5iSMDglRg8gFtGHvhvOhhGj6DpYZOHZ4Zv66fW9YWaNLbLowwYVoknK7m7rJRdcxsRJcVstd-5iETU4')">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+<div class="relative z-10 flex items-center justify-between w-full text-on-primary">
+<span class="font-label-sm text-label-sm">Live GPS Telemetry Active</span>
+<span class="font-label-sm text-[11px] text-primary-fixed cursor-pointer underline">Expand Live View</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Vehicle Management Toolbar & Filter Bar -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-sm p-space-md rounded-2xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center gap-space-xs flex-1 max-w-lg">
+<div class="flex items-center gap-space-xs w-full px-space-sm py-2 rounded-lg bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-outline">search</span>
+<input class="bg-transparent border-none outline-none w-full font-body-sm text-body-sm text-on-surface placeholder:text-outline" placeholder="Filter by Booking ID, Customer, Plate, or VIN..." type="text">
+</div>
+</div>
+<!-- Filter Pills and Category Controls -->
+<div class="flex items-center gap-space-xs flex-wrap">
+<div class="flex items-center bg-surface-container-low rounded-lg p-1">
+<button class="px-space-sm py-1 rounded-md bg-surface-container-lowest font-label-md text-label-md text-primary shadow-xs" style="background: rgb(245, 124, 0); color: rgb(255, 255, 255); font-weight: 600;">All Bookings</button>
+<button class="px-space-sm py-1 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface">On Road (84)</button>
+<button class="px-space-sm py-1 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface">Pending (11)</button>
+<button class="px-space-sm py-1 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface">Returned (19)</button>
+</div>
+<div class="h-6 w-[1px] bg-surface-container hidden sm:block"></div>
+<!-- Quick Maintenance Mode Toggle -->
+<div class="flex items-center gap-space-2xs bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[18px] text-secondary">build</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Service Mode</span>
+<label class="relative inline-flex items-center cursor-pointer ml-1">
+<input class="sr-only peer" type="checkbox" value="">
+<div class="w-8 h-4 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Recent Bookings Operational Data Table -->
+<div class="flex flex-col rounded-2xl bg-surface-container-lowest shadow-sm overflow-hidden">
+<div class="flex items-center justify-between p-space-md bg-surface-container-low/40">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-primary">Active Reservations &amp; Handover Queue</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-surface-container-high text-secondary">84 Active</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<button class="p-1 rounded hover:bg-surface-container text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[20px]">filter_list</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- Table Container -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<tr>
+<th class="py-space-sm px-space-md">Booking ID</th>
+<th class="py-space-sm px-space-md">Customer Name</th>
+<th class="py-space-sm px-space-md">Vehicle &amp; Plate</th>
+<th class="py-space-sm px-space-md">Dates</th>
+<th class="py-space-sm px-space-md">Station</th>
+<th class="py-space-sm px-space-md">Amount</th>
+<th class="py-space-sm px-space-md">Status</th>
+<th class="py-space-sm px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="py-space-md px-space-md font-label-md text-label-md text-primary font-semibold">
+              #RR-984210
+            </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-label-sm text-secondary font-bold">
+                  AW
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Alexander Wright</span>
+<span class="font-body-sm text-[12px] text-outline">alex.w@enterprise.com</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-semibold">Tata Nexon XZ+</span>
+<span class="font-label-sm text-[11px] text-outline uppercase font-mono">NY-489 · Compact SUV</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="text-on-surface font-medium">Oct 24 - 27</span>
+<span class="block text-[12px] text-outline">3 Days Rental</span>
+</td>
+<td class="py-space-md px-space-md text-on-surface">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+                Manhattan Hub
+              </div>
+</td>
+<td class="py-space-md px-space-md font-label-md text-label-md text-primary font-bold">
+              $251.40
+            </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Confirmed
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-xs py-1 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container-highest transition-colors">
+                  Inspect
+                </button>
+<button class="px-space-xs py-1 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary/90 transition-colors" style="background: rgb(245, 124, 0); color: rgb(255, 255, 255);">
+                  Approve
+                </button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="py-space-md px-space-md font-label-md text-label-md text-primary font-semibold">
+              #RR-984209
+            </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-label-sm text-secondary font-bold">
+                  SL
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Sarah Lindqvist</span>
+<span class="font-body-sm text-[12px] text-outline">s.lindqvist@nordic.se</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-semibold">RE Classic 350</span>
+<span class="font-label-sm text-[11px] text-outline uppercase font-mono">NY-102 · Cruiser Bike</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="text-on-surface font-medium">Oct 23 - 25</span>
+<span class="block text-[12px] text-outline">2 Days Rental</span>
+</td>
+<td class="py-space-md px-space-md text-on-surface">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+                Brooklyn Hub
+              </div>
+</td>
+<td class="py-space-md px-space-md font-label-md text-label-md text-primary font-bold">
+              $105.00
+            </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+                On Road
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="flex items-center gap-1 px-space-xs py-1 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm hover:bg-secondary/90 transition-colors shadow-xs" style="background: rgb(255, 87, 34); color: rgb(255, 255, 255);">
+<span class="material-symbols-outlined text-[14px]">satellite_alt</span>
+                  Track GPS
+                </button>
+<button class="px-space-xs py-1 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container-highest transition-colors">
+                  Inspect
+                </button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="py-space-md px-space-md font-label-md text-label-md text-primary font-semibold">
+              #RR-984208
+            </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-label-sm text-secondary font-bold">
+                  MR
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Marcus Reynolds</span>
+<span class="font-body-sm text-[12px] text-outline">reynolds.m@apex.io</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-semibold">Toyota Innova Crysta</span>
+<span class="font-label-sm text-[11px] text-outline uppercase font-mono">NY-771 · MPV / Van</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="text-on-surface font-medium">Oct 22 - 26</span>
+<span class="block text-[12px] text-outline">4 Days Rental</span>
+</td>
+<td class="py-space-md px-space-md text-on-surface">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+                JFK Airport T4
+              </div>
+</td>
+<td class="py-space-md px-space-md font-label-md text-label-md text-primary font-bold">
+              $380.00
+            </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+                On Road
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="flex items-center gap-1 px-space-xs py-1 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm hover:bg-secondary/90 transition-colors shadow-xs" style="background: rgb(255, 87, 34); color: rgb(255, 255, 255);">
+<span class="material-symbols-outlined text-[14px]">satellite_alt</span>
+                  Track GPS
+                </button>
+<button class="px-space-xs py-1 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container-highest transition-colors">
+                  Inspect
+                </button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="py-space-md px-space-md font-label-md text-label-md text-primary font-semibold">
+              #RR-984207
+            </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-label-sm text-secondary font-bold">
+                  DK
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Devon Keller</span>
+<span class="font-body-sm text-[12px] text-outline">keller.dev@gmail.com</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-semibold">Honda Activa 6G</span>
+<span class="font-label-sm text-[11px] text-outline uppercase font-mono">NY-332 · E-Scooter</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="text-on-surface font-medium">Oct 21 - 22</span>
+<span class="block text-[12px] text-outline">Completed</span>
+</td>
+<td class="py-space-md px-space-md text-on-surface">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+                Manhattan Hub
+              </div>
+</td>
+<td class="py-space-md px-space-md font-label-md text-label-md text-primary font-bold">
+              $44.00
+            </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                Returned
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-xs py-1 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container-highest transition-colors">
+                  Release Deposit
+                </button>
+<button class="px-space-xs py-1 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary/90 transition-colors">
+                  Complete
+                </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Footer -->
+<div class="flex flex-col sm:flex-row items-center justify-between p-space-md bg-surface-container-low/40 gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<span class="">Showing <strong class="text-on-surface">1 - 4</strong> of 84 live operational bookings</span>
+<div class="flex items-center gap-space-2xs">
+<button class="px-space-sm py-1 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high disabled:opacity-50" disabled="">
+          Previous
+        </button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center" style="background: linear-gradient(135deg, rgb(245, 124, 0) 0%, rgb(255, 87, 34) 100%); color: rgb(255, 255, 255); font-weight: bold;">
+          1
+        </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md flex items-center justify-center hover:bg-surface-container">
+          2
+        </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md flex items-center justify-center hover:bg-surface-container">
+          3
+        </button>
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container">
+          Next
+        </button>
+</div>
+</div>
+</div>
+</div></main></div>
+
+</body></html>

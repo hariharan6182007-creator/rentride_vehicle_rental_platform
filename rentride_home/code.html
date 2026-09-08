@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>RentRide - Commercial Vehicle Rental</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-high":"#e2e7ff","error-container":"#ffdad6","on-surface":"#131b2e","surface-container":"#eaedff","primary-fixed":"#d5e3ff","on-secondary":"#ffffff","outline-variant":"#c4c6cf","on-tertiary":"#ffffff","surface-container-low":"#f2f3ff","on-primary-fixed-variant":"#30476a","primary-fixed-dim":"#b0c8f1","surface-container-lowest":"#ffffff","surface-tint":"#485f83","surface":"#faf8ff","surface-dim":"#d2d9f4","surface-bright":"#faf8ff","tertiary-container":"#00301e","inverse-surface":"#283044","secondary":"#006398","on-background":"#131b2e","primary-container":"#0f294a","on-primary-container":"#7a91b7","surface-variant":"#dae2fd","secondary-fixed-dim":"#93ccff","surface-container-highest":"#dae2fd","tertiary-fixed-dim":"#4edea3","inverse-primary":"#b0c8f1","on-error":"#ffffff","secondary-fixed":"#cce5ff","on-surface-variant":"#44474e","on-secondary-fixed-variant":"#004b73","on-secondary-fixed":"#001d31","outline":"#74777f","on-primary-fixed":"#001b3b","primary":"#00142f","on-error-container":"#93000a","error":"#ba1a1a","on-tertiary-fixed-variant":"#005236","on-tertiary-container":"#00a472","secondary-container":"#5bb8fe","inverse-on-surface":"#eef0ff","on-tertiary-fixed":"#002113","background":"#faf8ff","tertiary-fixed":"#6ffbbe","on-primary":"#ffffff","on-secondary-container":"#00476e","tertiary":"#00190e"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-2xs":"0.25rem","margin-desktop":"2rem","margin-mobile":"1rem","space-sm":"0.75rem","space-xl":"2rem","space-xs":"0.5rem","gutter-mobile":"1rem","space-lg":"1.5rem","space-3xl":"4rem","space-2xl":"3rem","gutter-desktop":"1.5rem","space-md":"1rem"},fontFamily:{"label-lg":["Inter"],"body-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"],"body-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-md":["Plus Jakarta Sans"]},fontSize:{"label-lg":["15px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}],"headline-lg-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"700"}],"body-sm":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-xl":["44px",{lineHeight:"52px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-xl-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-md":["16px",{lineHeight:"24px",fontWeight:"400"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-surface-container"><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop"><div class="h-20 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm shrink-0"><a class="flex items-center gap-space-xs" data-path="home" href="#"><img alt="RentRide Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VK2hbgXVsXou5iDw15gKRL3FnTpdhN8HgT9bo_W8N2PfCABzb2aliZ3PPuhqaYe6XBHQRENH0jpQcnENDCTZcHAiKdPt1Eo4KDJTwx0iPHnn6pCJ2bSdrfOC4hsNlZ0fDj2_6d0cExTtct65VNuFXJ5N72CvCeOpc8I0qYAABP5cISF2HaQ-aY_33td8CgnHyoqB0JnB7GoEVvef1IFpt0iJsKOSeRFRCWHOGu6TKEJHlkMvoDPkoDmRE"/><span class="font-headline-md text-headline-sm tracking-tight text-primary font-bold">RentRide</span></a></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-secondary font-bold"><a aria-current="page" class="transition-colors text-secondary font-bold" data-path="home" href="#">Home</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="vehicles" href="#">Vehicles</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="how-it-works" href="#">How It Works</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#">Dashboard</a></nav><div class="flex items-center gap-space-sm"><div class="hidden lg:flex items-center gap-space-xs text-on-surface-variant px-space-xs py-space-2xs bg-surface-container-low rounded-lg"><span class="material-symbols-outlined text-[18px] text-secondary">support_agent</span><div class="flex flex-col text-left leading-tight"><span class="font-label-sm text-[10px] uppercase text-outline">24/7 Hotline</span><a class="font-label-md text-[12px] font-semibold text-on-surface hover:text-secondary" href="tel:+18007368743">+1 800-RENTRIDE</a></div></div><div class="hidden md:flex items-center gap-space-2xs px-space-xs py-space-xs bg-surface-container-lowest border border-surface-container rounded-lg text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">language</span><span class="font-label-md text-[12px] text-on-surface font-medium">USD</span><span class="text-outline text-[12px]">/</span><span class="material-symbols-outlined text-[16px]">location_on</span><span class="font-label-md text-[12px] text-on-surface font-medium">NYC</span></div><div class="hidden sm:flex items-center gap-space-xs"><a class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-primary hover:bg-surface-container transition-colors" data-path="login" href="#">Log In</a><a class="px-space-md py-space-xs rounded-lg font-label-lg text-label-lg bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary transition-colors shadow-sm" data-path="sign-up" href="#">Sign Up</a></div><div class="flex items-center gap-space-xs pl-space-2xs border-l border-surface-container"><a class="relative flex items-center justify-center p-0.5 rounded-full ring-2 ring-transparent hover:ring-secondary transition-all" data-path="user-profile" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWRvgv7pP9uwSCFRW4yP55Q6c963FPgV7SwPO8qIXzJ7zTMZIrvcsU6VvWWl-hmjWf9IBQF1ToBSyLdn-cprOIpqkY7uSrRzn1sWQXuqrlo0KSeDHiEcDK2W0wM4jXNPnpeKEscV60mhpikUugTwafaEbbI6_7cXPtFbSXsOaxe-veAul2CDZucXA3CQsMTiNT-mcKoDzWdw1oiDHUL-b1mrpegPsNtLTGYy3RMkI1jmHtJ26V9j_M"/></a></div></div></div></div></header><main class="w-full pt-20 bg-background flex-1"><div class="flex flex-col w-full">
+<!-- HERO SECTION WITH INTEGRATED SEARCH WIDGET -->
+<section class="relative w-full overflow-hidden bg-primary text-on-primary pt-space-2xl pb-space-3xl">
+<!-- Ambient Backdrop Gradients -->
+<div class="absolute inset-0 pointer-events-none opacity-40">
+<div class="absolute -top-32 -left-20 w-96 h-96 rounded-full bg-secondary blur-3xl"></div>
+<div class="absolute top-1/2 -right-24 w-[500px] h-[500px] rounded-full bg-primary-container blur-2xl"></div>
+</div>
+<div class="relative max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop z-10">
+<!-- Asymmetric Hero Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center pb-space-2xl">
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Live Telemetry Overline Badge -->
+<div class="inline-flex items-center gap-space-xs self-start px-space-sm py-1.5 rounded-full bg-surface-container-highest/20 backdrop-blur-md">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-secondary-fixed tracking-wide uppercase">Real-Time Fleet Availability</span>
+<span class="text-surface-variant/40 font-body-sm">|</span>
+<span class="font-label-sm text-label-sm text-on-primary">1,240+ Active Units</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-primary tracking-tight font-extrabold max-w-2xl">
+            Rent Your Ride. <br class="hidden sm:inline"/><span class="text-secondary-fixed-dim">Drive Your Way.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-xl">
+            Find the perfect vehicle for your journey with effortless digital reservation, guaranteed transparent pricing, and instant keyless pickup.
+          </p>
+<!-- Micro Trust Elements -->
+<div class="flex flex-wrap items-center gap-y-space-xs gap-x-space-lg pt-space-xs">
+<div class="flex items-center gap-space-xs text-surface-bright">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label-md text-label-md">50,000+ Journeys</span>
+</div>
+<div class="flex items-center gap-space-xs text-surface-bright">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]" style="font-variation-settings: 'FILL' 1;">price_check</span>
+<span class="font-label-md text-label-md">Zero Hidden Fees</span>
+</div>
+<div class="flex items-center gap-space-xs text-surface-bright">
+<span class="material-symbols-outlined text-secondary-container text-[20px]" style="font-variation-settings: 'FILL' 1;">event_available</span>
+<span class="font-label-md text-label-md">Free Cancellation (24h)</span>
+</div>
+</div>
+</div>
+<!-- Visual Hero Showcase Banner -->
+<div class="lg:col-span-5 relative flex justify-center lg:justify-end">
+<div class="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-primary-container">
+<img class="w-full h-full object-cover" data-alt="Sleek metallic blue modern SUV and parked sports motorbike on a clean asphalt road under soft cinematic morning light with urban skyline in background, deep navy shadows, studio precision lighting, premium automotive showcase" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUwFTUp5FHyCPL72VhhLz_PaYb1ShbJkcK0MWbZ0EUuvjXbE3SO55uAAzuhl3-zVj0HAUEJtgTyylbynQi21jHfvGP0Tnr5HGOoCWMmxTMDHifVXnDNjROSzSuTcIzIsGUYjdT6gnVYfkKzcRkIRB2NPRKFTZM9k_BoRZd8fwsMxMMVo3TsO47WarGRR1-AZgz8Jyb_ExDhGaBBUlxPQ03l1zukgWVXhwlwyAEEWI7TQHzaOFMQxrm"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-4 right-4 p-space-sm rounded-xl bg-primary-container/80 backdrop-blur-md flex items-center justify-between text-on-primary">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-fixed text-[22px]">bolt</span>
+<div>
+<div class="font-label-sm text-label-sm text-surface-variant uppercase">Fast Lane Express</div>
+<div class="font-headline-sm text-[15px] font-bold">Arrive &amp; Drive in 90s</div>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm uppercase font-semibold tracking-wider">Verified</span>
+</div>
+</div>
+</div>
+</div>
+<!-- FLOATING MULTI-CATEGORY SEARCH PANEL (LEVEL 3 ELEVATION) -->
+<div class="w-full rounded-2xl bg-surface-container-lowest text-on-surface p-space-md lg:p-space-lg shadow-2xl relative z-20">
+<!-- Category Filter Switcher Tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-sm mb-space-sm border-b border-surface-container">
+<button class="search-tab active-tab px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-primary text-on-primary flex items-center gap-space-xs transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">commute</span>
+<span>All Vehicles</span>
+</button>
+<button class="search-tab px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">directions_car</span>
+<span>Cars</span>
+</button>
+<button class="search-tab px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">electric_car</span>
+<span>SUVs</span>
+</button>
+<button class="search-tab px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">two_wheeler</span>
+<span>Bikes</span>
+</button>
+<button class="search-tab px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">moped</span>
+<span>Scooters</span>
+</button>
+</div>
+<!-- Form Inputs Multi-segment Grid -->
+<form class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-md items-end" onsubmit="event.preventDefault();">
+<!-- Pickup Location -->
+<div class="lg:col-span-4 flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+              Pick-up &amp; Drop-off Station
+            </label>
+<div class="relative">
+<select class="w-full h-12 pl-3 pr-8 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface focus:bg-surface-container-lowest focus:outline-none transition-all cursor-pointer appearance-none">
+<option value="manhattan">Downtown Manhattan Hub, NY (Hudson Sq)</option>
+<option value="jfk">JFK International Terminal 4, NY</option>
+<option value="brooklyn">Brooklyn Navy Yard Depot, NY</option>
+<option value="queens">LaGuardia Express Pick Zone, NY</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Pickup Schedule -->
+<div class="lg:col-span-3 flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">calendar_today</span>
+              Pick-up Date &amp; Time
+            </label>
+<div class="flex items-center gap-2">
+<input class="w-3/5 h-12 px-3 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:bg-surface-container-lowest focus:outline-none transition-all" type="date" value="2025-05-15"/>
+<input class="w-2/5 h-12 px-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:bg-surface-container-lowest focus:outline-none transition-all" type="time" value="10:00"/>
+</div>
+</div>
+<!-- Return Schedule -->
+<div class="lg:col-span-3 flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">event_repeat</span>
+              Return Date &amp; Time
+            </label>
+<div class="flex items-center gap-2">
+<input class="w-3/5 h-12 px-3 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:bg-surface-container-lowest focus:outline-none transition-all" type="date" value="2025-05-18"/>
+<input class="w-2/5 h-12 px-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:bg-surface-container-lowest focus:outline-none transition-all" type="time" value="18:00"/>
+</div>
+</div>
+<!-- Submit CTA -->
+<div class="lg:col-span-2">
+<button class="w-full h-12 rounded-lg bg-secondary hover:bg-secondary-container hover:text-on-secondary-container text-on-secondary font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-all shadow-md active:scale-95" type="submit">
+<span>Search Fleet</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- CATEGORIES HIGHLIGHT SECTION -->
+<section class="w-full bg-surface-container-low py-space-3xl">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm mb-space-2xl">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-widest">Tailored Mobility</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-1">Browse by Fleet Category</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          From quick urban dashes to long-distance group tours, select from specialized machine categories fine-tuned to your route.
+        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Category 1: Cars -->
+<div class="group p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer">
+<div>
+<div class="w-14 h-14 rounded-xl bg-primary-fixed flex items-center justify-center text-primary mb-space-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">directions_car</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Cars &amp; Sedans</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Fuel-efficient hatchbacks and refined executive sedans.</p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-surface-container flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary font-bold">120+ Active Models</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all text-[20px]">arrow_right_alt</span>
+</div>
+</div>
+<!-- Category 2: SUVs -->
+<div class="group p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer">
+<div>
+<div class="w-14 h-14 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary mb-space-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">airport_shuttle</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">SUVs &amp; 4x4s</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Elevated ground clearance and generous family luggage volume.</p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-surface-container flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary font-bold">85+ Active Models</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all text-[20px]">arrow_right_alt</span>
+</div>
+</div>
+<!-- Category 3: Bikes -->
+<div class="group p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer">
+<div>
+<div class="w-14 h-14 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary mb-space-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">two_wheeler</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Cruiser &amp; Sport Bikes</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pure open-air freedom for highway getaways and coastal touring.</p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-surface-container flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary font-bold">64+ Active Models</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all text-[20px]">arrow_right_alt</span>
+</div>
+</div>
+<!-- Category 4: Scooters -->
+<div class="group p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer">
+<div>
+<div class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-space-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">electric_scooter</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Urban Commuter Scooters</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Twist-and-go convenience designed to zip past heavy gridlock.</p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-surface-container flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary font-bold">40+ Active Models</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all text-[20px]">arrow_right_alt</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURED FLEET POPULAR VEHICLES SECTION -->
+<section class="w-full bg-surface py-space-3xl">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md mb-space-xl">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-widest">Handpicked Selections</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-1">Featured Fleet Ready to Roll</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Explore our highest-reviewed cars, bikes, and commuter scooters with instant unlock.</p>
+</div>
+<!-- Filter Pill Navigation -->
+<div class="inline-flex p-1.5 rounded-xl bg-surface-container overflow-x-auto">
+<button class="fleet-filter px-4 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md transition-all" type="button">All Units</button>
+<button class="fleet-filter px-4 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" type="button">Cars</button>
+<button class="fleet-filter px-4 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" type="button">SUVs</button>
+<button class="fleet-filter px-4 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" type="button">Bikes</button>
+<button class="fleet-filter px-4 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" type="button">Scooters</button>
+</div>
+</div>
+<!-- 4 High-Contrast Vehicle Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Vehicle 1: Hyundai i20 -->
+<div class="flex flex-col rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+<div class="relative aspect-[16/10] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Modern Hyundai i20 premium compact hatchback parked diagonally on clean studio concrete, deep navy glossy finish, realistic headlights reflection, commercial automotive photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCidoSC4Ebx5maNLluscWoouMnBBsHREOB5OfkYluajV-Td-h2puwFgP3ulmybePY5C403mjkE_q6nJZH3xakGxT0zRsnurtyeY0sXqgS29Xzr7JM-bQhOOMyJ1ayBvdbpNwV3J_Y63HzL3X4omppsEWnNVCdIo9W--b7KJ-9KbXEyLxyyJBRK0RcyqpOES7kADMQ7h7H0CVGVp4t9aaW6TDo6nlNySbtYHwTtO7FfVzDvY3bRSMSr5"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase">Hatchback</span>
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.8</span>
+<span class="text-surface-variant/70 text-[10px]">(124)</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline-sm text-[18px] text-primary font-bold">Hyundai i20 Magna</h3>
+<span class="inline-flex items-center gap-1 text-[11px] font-label-sm text-tertiary-container font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span> Instant Confirm
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Efficient city handling with spacious trunk space.</p>
+<!-- Specs Grid -->
+<div class="grid grid-cols-2 gap-2 mb-space-md">
+<div class="flex items-center gap-1.5 py-1 px-2 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">airline_seat_recline_normal</span>
+<span>5 Seats</span>
+</div>
+<div class="flex items-center gap-1.5 py-1 px-2 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">settings</span>
+<span>Manual</span>
+</div>
+<div class="flex items-center gap-1.5 py-1 px-2 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">local_gas_station</span>
+<span>Petrol</span>
+</div>
+<div class="flex items-center gap-1.5 py-1 px-2 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">speed</span>
+<span>18.5 km/l</span>
+</div>
+</div>
+</div>
+<!-- Price & Action Footer -->
+<div class="pt-space-sm border-t border-surface-container flex items-center justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">$45</span>
+<span class="font-body-sm text-body-sm text-outline">/day</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-3 py-2 rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">Details</button>
+<button class="px-3 py-2 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-secondary-container hover:text-on-secondary-container transition-all" type="button">Rent</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Vehicle 2: Tata Nexon -->
+<div class="flex flex-col rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+<div class="relative aspect-[16/10] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Modern dark gray Tata Nexon compact SUV on scenic coastal highway at golden hour, bold stance, detailed alloy wheels, cinematic lighting, sleek reflection on automotive body" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPKR8Nk-gIM38idPBYrQInAPw8KWzRCb-rm_SQKz3WoCVOYuxy4MXc4sBYclJjFTnp-zK0sKSom_pmrF-UUT1l7ei3XXgZj-SdUey5TSDgvQtbpgujsKWKXyVa6HzOXxAr5m8hWLDyY1SSLHFkK0eZuLxpJCPs96cDlz4nprw3-afruUaJrTKmTY669opZPXBZKTH9mQ7TSwpKEabKfdDuUIRlzEZHqbwu03PyrO79fA2ZRDPi5lyT"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase">Compact SUV</span>
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+<span class="text-surface-variant/70 text-[10px]">(210)</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline-sm text-[18px] text-primary font-bold">Tata Nexon XZ+</h3>
+<span class="inline-flex items-center gap-1 text-[11px] font-label-sm text-tertiary-container font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span> Available Now
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">5-star safety rating with high highway clearance.</p>
+<!-- Specs Grid -->
+<div class="grid grid-cols-2 gap-2 mb-space-md">
+<div class="flex items-center gap-1.5 py-1 px-2 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">airline_seat_recline_normal</span>
+<span>5 Seats</span>
+</div>
+<div class="flex items-center gap-1.5 py-1 px-2 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">autorenew</span>
+<span>Automatic</span>
+</div>
+<div class="flex items-center gap-1.5 py-1 px-2 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">local_gas_station</span>
+<span>Diesel</span>
+</div>
+<div class="flex items-center gap-1.5 py-1 px-2 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">speed</span>
+<span>21.0 km/l</span>
+</div>
+</div>
+</div>
+<!-- Price & Action Footer -->
+<div class="pt-space-sm border-t border-surface-container flex items-center justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">$58</span>
+<span class="font-body-sm text-body-sm text-outline">/day</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-3 py-2 rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">Details</button>
+<button class="px-3 py-2 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-secondary-container hover:text-on-secondary-container transition-all" type="button">Rent</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Vehicle 3: Royal Enfield Classic 350 -->
+<div class="flex flex-col rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+<div class="relative aspect-[16/10] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Classic matte black and chrome Royal Enfield 350 cruiser motorbike parked beside an open mountain pass road, vintage aesthetic, deep textured details on engine block and leather seat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiwcTQD6tK0_uDWKC21g5_i3xeVF5SJRPnz656WpMamMc2rKdc6GTMPWRNSzHmrhswPrLxMHCCXM65gZmJfOUsZFZG0-ecaaPrsHVAwlBbxyIEmchAhXdgPrB2VChCKb0ieT5stdkoke6VVcXqpU94fvVWZdQb9sBU7yzBv78JhGZnA_NfS5kUk8Oem1YZ4xI3GfkF_osKPBtFYMIsZ_u-q5t-Otcs15oR9w32Un3EReJuPSYrLXIv"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase">Cruiser Bike</span>
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+<span class="text-surface-variant/70 text-[10px]">(88)</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline-sm text-[18px] text-primary font-bold">RE Classic 350</h3>
+<span class="inline-flex items-center gap-1 text-[11px] font-label-sm text-tertiary-container font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span> Helmet Incl.
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Iconic thumping sound and timeless road presence.</p>
+<!-- Specs Grid -->
+<div class="grid grid-cols-2 gap-2 mb-space-md">
+<div class="flex items-center gap-1.5 py-1 px-2 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">person</span>
+<span>2 Seats</span>
+</div>
+<div class="flex items-center gap-1.5 py-1 px-2 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">settings</span>
+<span>5-Speed</span>
+</div>
+<div class="flex items-center gap-1.5 py-1 px-2 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">local_gas_station</span>
+<span>Petrol</span>
+</div>
+<div class="flex items-center gap-1.5 py-1 px-2 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">speed</span>
+<span>35.0 km/l</span>
+</div>
+</div>
+</div>
+<!-- Price & Action Footer -->
+<div class="pt-space-sm border-t border-surface-container flex items-center justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">$35</span>
+<span class="font-body-sm text-body-sm text-outline">/day</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-3 py-2 rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">Details</button>
+<button class="px-3 py-2 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-secondary-container hover:text-on-secondary-container transition-all" type="button">Rent</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Vehicle 4: Honda Activa 6G -->
+<div class="flex flex-col rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+<div class="relative aspect-[16/10] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Bright pearl white modern Honda Activa 6G urban scooter parked on a stylized metro downtown curb, sunny day, crisp commercial lighting, modern clean transit mobility vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgHG567flk-FchWAgLWy5Z0vh6PsitQsayKur59avYz0pExMgzDS0rpuuMkBwu4LNc_0DGqVrO4tBNELjfUsqDbSb3db-M3svLYFbcwNegYTzn7OGXarXtIu8rhs-RKTQXbw_9w5NXUKnApeCfFp787KvVJoYwlbw8MHLoBlL8XLGdMHCb5XV1Sqtv6lS-8EJjI6OQSz-0hww_dsWDPo028AfLxOf3hlKt02CpHfyR805y2qkWY5UW"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase">Urban Scooter</span>
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.7</span>
+<span class="text-surface-variant/70 text-[10px]">(142)</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline-sm text-[18px] text-primary font-bold">Honda Activa 6G</h3>
+<span class="inline-flex items-center gap-1 text-[11px] font-label-sm text-tertiary-container font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span> 2 Helmets
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Lightweight, ultra-economical, and stress-free parking.</p>
+<!-- Specs Grid -->
+<div class="grid grid-cols-2 gap-2 mb-space-md">
+<div class="flex items-center gap-1.5 py-1 px-2 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">person</span>
+<span>2 Seats</span>
+</div>
+<div class="flex items-center gap-1.5 py-1 px-2 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">auto_mode</span>
+<span>CVT Auto</span>
+</div>
+<div class="flex items-center gap-1.5 py-1 px-2 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">local_gas_station</span>
+<span>Petrol</span>
+</div>
+<div class="flex items-center gap-1.5 py-1 px-2 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">speed</span>
+<span>45.0 km/l</span>
+</div>
+</div>
+</div>
+<!-- Price & Action Footer -->
+<div class="pt-space-sm border-t border-surface-container flex items-center justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">$22</span>
+<span class="font-body-sm text-body-sm text-outline">/day</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-3 py-2 rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">Details</button>
+<button class="px-3 py-2 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-secondary-container hover:text-on-secondary-container transition-all" type="button">Rent</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- HOW IT WORKS STEP PROGRESSION SECTION -->
+<section class="w-full bg-surface-container-lowest py-space-3xl">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center max-w-2xl mx-auto mb-space-2xl">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-widest">Effortless Journey</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-1">How RentRide Works</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Experience frictionless mobility with our paperless 3-step digital checkout and fast-track terminal handover.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-xl relative">
+<!-- Step 1 -->
+<div class="relative flex flex-col items-center text-center p-space-lg rounded-2xl bg-surface-container-low">
+<div class="w-16 h-16 rounded-full bg-primary text-on-primary font-headline-md text-headline-md flex items-center justify-center mb-space-md shadow-md">
+            1
+          </div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs font-bold">Search Your Ride</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Choose your pickup station, dates, and tailor your parameters using comprehensive mileage and vehicle filters.
+          </p>
+<div class="mt-space-md inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Real-time availability</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col items-center text-center p-space-lg rounded-2xl bg-surface-container-low">
+<div class="w-16 h-16 rounded-full bg-secondary text-on-secondary font-headline-md text-headline-md flex items-center justify-center mb-space-md shadow-md">
+            2
+          </div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs font-bold">Book With Instant Approval</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Confirm in 60 seconds with our verified digital license verification. No security paperwork, no waiting queues.
+          </p>
+<div class="mt-space-md inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">lock_clock</span>
+<span>Instant confirmation</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col items-center text-center p-space-lg rounded-2xl bg-surface-container-low">
+<div class="w-16 h-16 rounded-full bg-tertiary-container text-tertiary-fixed font-headline-md text-headline-md flex items-center justify-center mb-space-md shadow-md">
+            3
+          </div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs font-bold">Enjoy Your Ride</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Unlock via phone or grab keys from station hosts. Drive with complete peace of mind with 24/7 road rescue.
+          </p>
+<div class="mt-space-md inline-flex items-center gap-1 text-tertiary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+<span>24/7 Roadside Rescue</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- WHY CHOOSE RENTRIDE VALUE PROPS -->
+<section class="w-full bg-surface-container-high/30 py-space-3xl">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-widest">Enterprise Advantage</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Why Thousands Commute With RentRide</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            We operate our own dedicated service facilities to ensure every engine, brake, and battery meets rigorous ISO commercial safety standards before reaching your hands.
+          </p>
+<div class="mt-space-md p-space-md rounded-xl bg-primary text-on-primary flex items-center gap-space-md">
+<div class="text-headline-lg font-bold text-secondary-fixed-dim">99.4%</div>
+<div class="border-l border-primary-container pl-space-md">
+<div class="font-headline-sm text-[16px] font-semibold">On-Time Handover Index</div>
+<div class="font-body-sm text-body-sm text-surface-variant">Vehicle parked and sanitized ready at your designated minute.</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Prop 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary mb-1">
+<span class="material-symbols-outlined text-[26px]">pin_drop</span>
+</div>
+<h4 class="font-headline-sm text-[18px] text-primary font-bold">Flexible Hub Pickups</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Pick up at the airport, drop off downtown. Flexible cross-station drop-offs without punitive re-routing charges.
+            </p>
+</div>
+<!-- Prop 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary mb-1">
+<span class="material-symbols-outlined text-[26px]">loyalty</span>
+</div>
+<h4 class="font-headline-sm text-[18px] text-primary font-bold">Best Price Guarantee</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Found a lower comparable daily rate? We will match the difference and credit $20 toward your fuel extras.
+            </p>
+</div>
+<!-- Prop 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<div class="w-12 h-12 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary mb-1">
+<span class="material-symbols-outlined text-[26px]">clean_hands</span>
+</div>
+<h4 class="font-headline-sm text-[18px] text-primary font-bold">Cleaned &amp; Insured</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Every unit goes through hospital-grade multi-touch sanitization alongside complete comprehensive damage insurance.
+            </p>
+</div>
+<!-- Prop 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-1">
+<span class="material-symbols-outlined text-[26px]">sos</span>
+</div>
+<h4 class="font-headline-sm text-[18px] text-primary font-bold">24/7 Roadside Rescue</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Flat tire or emergency breakdown? Our mobile fleet vans dispatch within 35 minutes across all metropolitan zones.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CUSTOMER REVIEWS & TESTIMONIALS SECTION -->
+<section class="w-full bg-surface py-space-3xl">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm mb-space-2xl">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-widest">Verified Drivers</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-1">What Our Renters Say</h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-lg text-label-lg text-primary font-bold">4.9 / 5.0</span>
+<span class="font-body-sm text-body-sm text-outline">(18,400+ reviews)</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Review 1 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-secondary-container mb-space-sm">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-space-md italic">
+              "Rented the Tata Nexon for a 4-day upstate weekend getaway. Keyless smartphone pickup took less than 2 minutes. The car was spotless, fully fueled, and drove like a dream."
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-sm border-t border-surface-container">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center font-headline-sm text-[16px] text-primary font-bold">
+              MR
+            </div>
+<div>
+<div class="font-headline-sm text-[15px] text-primary font-bold">Marcus Reynolds</div>
+<div class="font-body-sm text-body-sm text-outline">NYC • Rented Compact SUV</div>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-secondary-container mb-space-sm">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-space-md italic">
+              "Booking the Royal Enfield Classic 350 for a scenic coast trip was the best spontaneous travel decision ever. Transparent insurance, zero hassle at depot, clean helmet provided!"
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-sm border-t border-surface-container">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center font-headline-sm text-[16px] text-secondary font-bold">
+              SL
+            </div>
+<div>
+<div class="font-headline-sm text-[15px] text-primary font-bold">Sarah Lindqvist</div>
+<div class="font-body-sm text-body-sm text-outline">Brooklyn • Rented Cruiser Bike</div>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-secondary-container mb-space-sm">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-space-md italic">
+              "We manage multiple client errands around midtown Manhattan. Booking scooters through RentRide saved our team hours of parking headache and congestion tolls. Super responsive support."
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-sm border-t border-surface-container">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center font-headline-sm text-[16px] text-tertiary font-bold">
+              DK
+            </div>
+<div>
+<div class="font-headline-sm text-[15px] text-primary font-bold">Devon Keller</div>
+<div class="font-body-sm text-body-sm text-outline">Queens • Rented Urban Scooter</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CALL TO ACTION (CTA) CONVERSION BANNER -->
+<section class="w-full bg-surface pb-space-3xl">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-primary via-primary-container to-secondary p-space-xl md:p-space-3xl text-on-primary shadow-2xl">
+<!-- Abstract geometric accent -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-secondary-container/20 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-space-xl">
+<div class="max-w-2xl text-center lg:text-left">
+<span class="inline-block px-3 py-1 rounded-full bg-surface-container-highest/20 font-label-sm text-label-sm text-secondary-fixed-dim uppercase tracking-wider mb-space-xs">Instant Setup</span>
+<h2 class="font-headline-xl text-headline-xl text-on-primary font-bold tracking-tight">Ready to hit the road?</h2>
+<p class="font-body-lg text-body-lg text-surface-variant mt-space-xs">
+              Join over 100,000+ satisfied travelers worldwide. Lock in your vehicle now and enjoy unconditional free cancellation up to 24 hours prior.
+            </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-sm shrink-0 w-full sm:w-auto">
+<button class="w-full sm:w-auto px-space-xl py-4 rounded-xl bg-surface-container-lowest text-primary hover:bg-surface-container font-headline-sm text-[16px] font-bold shadow-lg transition-all text-center" type="button">
+              Browse All Vehicles
+            </button>
+<button class="w-full sm:w-auto px-space-lg py-4 rounded-xl bg-secondary hover:bg-secondary-container hover:text-on-secondary-container text-on-secondary font-headline-sm text-[16px] font-semibold transition-all text-center" type="button">
+              Download App
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MICRO-INTERACTION SCRIPT -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Search tabs micro-interaction
+      const searchTabs = document.querySelectorAll('.search-tab');
+      searchTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          searchTabs.forEach(t => {
+            t.classList.remove('bg-primary', 'text-on-primary');
+            t.classList.add('bg-surface-container', 'text-on-surface-variant');
+          });
+          tab.classList.remove('bg-surface-container', 'text-on-surface-variant');
+          tab.classList.add('bg-primary', 'text-on-primary');
+        });
+      });
+
+      // Fleet category filter pills
+      const filterPills = document.querySelectorAll('.fleet-filter');
+      filterPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          filterPills.forEach(p => {
+            p.classList.remove('bg-primary', 'text-on-primary');
+            p.classList.add('text-on-surface-variant');
+          });
+          pill.classList.remove('text-on-surface-variant');
+          pill.classList.add('bg-primary', 'text-on-primary');
+        });
+      });
+    });
+  </script>
+</div></main><footer class="w-full bg-primary text-on-primary pt-space-3xl pb-space-xl border-t border-primary-container"><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl pb-space-2xl border-b border-primary-container"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary-fixed-dim text-[32px]">local_shipping</span><span class="font-headline-md text-headline-md text-on-primary font-bold tracking-tight">RentRide</span></div><p class="font-body-sm text-body-sm text-surface-variant max-w-sm">Premier commercial mobility solutions. Fleet management, heavy-duty logistics vans, motorbikes, and eco-mobility rentals for businesses and travelers worldwide.</p><div class="flex items-center gap-space-xs pt-space-xs"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-primary-container border border-outline/30 text-surface-bright"><span class="material-symbols-outlined text-tertiary-fixed text-[20px]">verified</span><div class="flex flex-col"><span class="font-label-sm text-[10px] text-surface-variant uppercase">Assistance</span><span class="font-label-md text-label-md font-semibold text-on-primary">24/7 Roadside Ready</span></div></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-primary-container border border-outline/30 text-surface-bright"><span class="material-symbols-outlined text-secondary-fixed text-[20px]">security</span><div class="flex flex-col"><span class="font-label-sm text-[10px] text-surface-variant uppercase">Security</span><span class="font-label-md text-label-md font-semibold text-on-primary">Insured &amp; Certified</span></div></div></div></div><div><h4 class="font-headline-sm text-[16px] text-on-primary mb-space-md uppercase tracking-wider">Fleet Categories</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-variant"><li class="hover:text-on-primary transition-colors"><a data-path="vehicles" href="#">Commercial Trucks</a></li><li class="hover:text-on-primary transition-colors"><a data-path="vehicles" href="#">Passenger Vans &amp; SUVs</a></li><li class="hover:text-on-primary transition-colors"><a data-path="vehicles" href="#">Urban Cargo Scooters</a></li><li class="hover:text-on-primary transition-colors"><a data-path="vehicles" href="#">Delivery Motorbikes</a></li><li class="hover:text-on-primary transition-colors"><a data-path="vehicles" href="#">Electric Fleets</a></li></ul></div><div><h4 class="font-headline-sm text-[16px] text-on-primary mb-space-md uppercase tracking-wider">Key Locations</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-variant"><li class="hover:text-on-primary transition-colors"><a data-path="vehicles" href="#">New York Metro</a></li><li class="hover:text-on-primary transition-colors"><a data-path="vehicles" href="#">Los Angeles Hub</a></li><li class="hover:text-on-primary transition-colors"><a data-path="vehicles" href="#">Chicago Center</a></li><li class="hover:text-on-primary transition-colors"><a data-path="vehicles" href="#">Miami Port Authority</a></li><li class="hover:text-on-primary transition-colors"><a data-path="vehicles" href="#">Dallas-Fort Worth</a></li></ul></div><div><h4 class="font-headline-sm text-[16px] text-on-primary mb-space-md uppercase tracking-wider">Compliance &amp; Trust</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-variant"><li class="hover:text-on-primary transition-colors"><a data-path="rental-policies" href="#">Rental Agreements</a></li><li class="hover:text-on-primary transition-colors"><a data-path="rental-policies" href="#">Commercial Insurance</a></li><li class="hover:text-on-primary transition-colors"><a data-path="rental-policies" href="#">Fleet Safety Specs</a></li><li class="hover:text-on-primary transition-colors"><a data-path="rental-policies" href="#">Privacy &amp; GDPR</a></li><li class="hover:text-on-primary transition-colors"><a data-path="rental-policies" href="#">Terms of Service</a></li></ul></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-surface-variant"><p>© 2025 RentRide Enterprise Mobility Inc. All rights reserved.</p><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px] hover:text-on-primary transition-colors cursor-pointer">public</span><span class="material-symbols-outlined text-[20px] hover:text-on-primary transition-colors cursor-pointer">share</span><span class="material-symbols-outlined text-[20px] hover:text-on-primary transition-colors cursor-pointer">mark_email_unread</span><span class="material-symbols-outlined text-[20px] hover:text-on-primary transition-colors cursor-pointer">pin_drop</span></div></div></div></footer></body></html>

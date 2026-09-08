@@ -1,0 +1,560 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><title>RentRide - Fleet &amp; Booking Dashboard</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-high":"#e2e7ff","error-container":"#ffdad6","on-surface":"#131b2e","surface-container":"#eaedff","primary-fixed":"#d5e3ff","on-secondary":"#ffffff","outline-variant":"#c4c6cf","on-tertiary":"#ffffff","surface-container-low":"#f2f3ff","on-primary-fixed-variant":"#30476a","primary-fixed-dim":"#b0c8f1","surface-container-lowest":"#ffffff","surface-tint":"#485f83","surface":"#faf8ff","surface-dim":"#d2d9f4","surface-bright":"#faf8ff","tertiary-container":"#00301e","inverse-surface":"#283044","secondary":"#006398","on-background":"#131b2e","primary-container":"#0f294a","on-primary-container":"#7a91b7","surface-variant":"#dae2fd","secondary-fixed-dim":"#93ccff","surface-container-highest":"#dae2fd","tertiary-fixed-dim":"#4edea3","inverse-primary":"#b0c8f1","on-error":"#ffffff","secondary-fixed":"#cce5ff","on-surface-variant":"#44474e","on-secondary-fixed-variant":"#004b73","on-secondary-fixed":"#001d31","outline":"#74777f","on-primary-fixed":"#001b3b","primary":"#00142f","on-error-container":"#93000a","error":"#ba1a1a","on-tertiary-fixed-variant":"#005236","on-tertiary-container":"#00a472","secondary-container":"#5bb8fe","inverse-on-surface":"#eef0ff","on-tertiary-fixed":"#002113","background":"#faf8ff","tertiary-fixed":"#6ffbbe","on-primary":"#ffffff","on-secondary-container":"#00476e","tertiary":"#00190e"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-2xs":"0.25rem","margin-desktop":"2rem","margin-mobile":"1rem","space-sm":"0.75rem","space-xl":"2rem","space-xs":"0.5rem","gutter-mobile":"1rem","space-lg":"1.5rem","space-3xl":"4rem","space-2xl":"3rem","gutter-desktop":"1.5rem","space-md":"1rem"},fontFamily:{"label-lg":["Inter"],"body-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"],"body-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-md":["Plus Jakarta Sans"]},fontSize:{"label-lg":["15px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}],"headline-lg-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"700"}],"body-sm":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-xl":["44px",{lineHeight:"52px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-xl-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-md":["16px",{lineHeight:"24px",fontWeight:"400"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}]}}}};</script><style id="amber-coral-theme">:root{--amber-primary:#F57C00;--coral-accent:#FF5722;--amber-gradient:linear-gradient(135deg,#F57C00 0%,#FF5722 100%);}.bg-primary-container{background:var(--amber-gradient)!important;color:#ffffff!important;}.bg-primary{background-color:#F57C00!important;color:#ffffff!important;}.bg-secondary{background-color:#FF5722!important;color:#ffffff!important;}.text-secondary{color:#F57C00!important;}.text-primary{color:#2A1810!important;}.bg-secondary-container{background-color:#FFE0B2!important;}.bg-secondary\/10{background-color:rgba(245,124,0,0.12)!important;color:#F57C00!important;}.bg-secondary\/20{background-color:rgba(255,87,34,0.18)!important;}.bg-secondary\/5{background-color:rgba(245,124,0,0.06)!important;}.ring-secondary-container{--tw-ring-color:#FFCC80!important;}.bg-primary-fixed{background-color:#FFE0B2!important;}.text-primary-container{color:#E65100!important;}.hover\:bg-primary-container:hover{background:linear-gradient(135deg,#E65100 0%,#F4511E 100%)!important;}.hover\:bg-secondary\/90:hover{background-color:#F4511E!important;}</style></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-surface-container z-50 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-lg"><div class="px-space-md flex items-center gap-space-xs"><a class="flex items-center gap-space-xs" data-path="home" href="#"><img alt="RentRide Brand Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VK2hbgXVsXou5iDw15gKRL3FnTpdhN8HgT9bo_W8N2PfCABzb2aliZ3PPuhqaYe6XBHQRENH0jpQcnENDCTZcHAiKdPt1Eo4KDJTwx0iPHnn6pCJ2bSdrfOC4hsNlZ0fDj2_6d0cExTtct65VNuFXJ5N72CvCeOpc8I0qYAABP5cISF2HaQ-aY_33td8CgnHyoqB0JnB7GoEVvef1IFpt0iJsKOSeRFRCWHOGu6TKEJHlkMvoDPkoDmRE"><span class="font-headline-sm text-[18px] text-primary font-bold">RentRide Ops</span></a></div><nav class="flex flex-col gap-space-2xs px-space-xs" data-active-classes="bg-primary text-white font-bold"><a aria-current="page" class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg transition-colors bg-primary-container text-on-primary-container font-bold" data-path="dashboard" href="#" style="background: linear-gradient(135deg, #F57C00 0%, #FF5722 100%); color: #ffffff; box-shadow: 0 4px 12px rgba(245, 124, 0, 0.28);"><span class="material-symbols-outlined text-[20px]">grid_view</span>Overview</a><a class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="booking-management" href="#"><span class="material-symbols-outlined text-[20px]">book_online</span>Active Bookings</a><a class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="fleet-inventory" href="#"><span class="material-symbols-outlined text-[20px]">garage_home</span>Fleet Inventory</a><a class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="telematics-tracking" href="#"><span class="material-symbols-outlined text-[20px]">satellite_alt</span>Live Telematics</a><a class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="billing-invoices" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span>Billing &amp; Invoices</a><a class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="user-profile" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span>Account Settings</a></nav></div><div class="px-space-xs"><div class="p-space-sm rounded-xl bg-surface-container-low border border-surface-container flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs text-secondary"><span class="material-symbols-outlined text-[18px]">headset_mic</span><span class="font-label-sm text-label-sm font-semibold">Fleet Dispatch</span></div><span class="font-body-sm text-[12px] text-on-surface-variant">Direct hotline: ext #419</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-md border-b border-surface-container z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-sm w-96"><div class="flex items-center gap-space-xs w-full px-space-sm py-space-xs bg-surface-container-low rounded-lg text-outline"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-[13px] text-outline">Search fleet ID, driver, or reservation...</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[20px] cursor-pointer hover:text-on-surface">notifications</span><span class="material-symbols-outlined text-[20px] cursor-pointer hover:text-on-surface">help</span></div><div class="h-6 w-[1px] bg-surface-container"></div><div class="flex items-center gap-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWRvgv7pP9uwSCFRW4yP55Q6c963FPgV7SwPO8qIXzJ7zTMZIrvcsU6VvWWl-hmjWf9IBQF1ToBSyLdn-cprOIpqkY7uSrRzn1sWQXuqrlo0KSeDHiEcDK2W0wM4jXNPnpeKEscV60mhpikUugTwafaEbbI6_7cXPtFbSXsOaxe-veAul2CDZucXA3CQsMTiNT-mcKoDzWdw1oiDHUL-b1mrpegPsNtLTGYy3RMkI1jmHtJ26V9j_M"><div class="hidden sm:flex flex-col"><span class="font-label-md text-label-md text-on-surface leading-tight font-semibold">Commercial Admin</span><span class="font-label-sm text-[10px] text-outline uppercase">Logistics Ops</span></div></div></div></header><main class="w-full pt-16 px-space-xl bg-background min-h-screen"><div class="flex flex-col w-full py-space-md">
+<!-- Portal Inner Grid Layout -->
+<div class="grid grid-cols-12 gap-space-lg w-full">
+<!-- LEFT USER DEDICATED NAVIGATION RAIL -->
+<div class="col-span-12 lg:col-span-3 flex flex-col gap-space-md">
+<!-- User Profile Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-28 h-28 rounded-full bg-secondary/5 pointer-events-none"></div>
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<img alt="Alexander Wright" class="w-14 h-14 rounded-full object-cover shadow-sm ring-2 ring-secondary-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWRvgv7pP9uwSCFRW4yP55Q6c963FPgV7SwPO8qIXzJ7zTMZIrvcsU6VvWWl-hmjWf9IBQF1ToBSyLdn-cprOIpqkY7uSrRzn1sWQXuqrlo0KSeDHiEcDK2W0wM4jXNPnpeKEscV60mhpikUugTwafaEbbI6_7cXPtFbSXsOaxe-veAul2CDZucXA3CQsMTiNT-mcKoDzWdw1oiDHUL-b1mrpegPsNtLTGYy3RMkI1jmHtJ26V9j_M">
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-tertiary-fixed-dim rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-2xs">
+<h2 class="font-headline-sm text-[16px] text-on-surface font-bold truncate">Alexander Wright</h2>
+<span class="material-symbols-outlined text-[16px] text-secondary" title="Verified Driver">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Gold Tier Member</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant truncate">ID: #CUST-84920</span>
+</div>
+</div>
+<!-- Membership Mini Progress Bar -->
+<div class="bg-surface-container-low rounded-lg p-space-xs flex flex-col gap-space-2xs mt-space-2xs">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Platinum Upgrade</span>
+<span class="text-secondary font-bold">750 / 2,000 pts</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-500" style="width: 37.5%; background: linear-gradient(90deg, rgb(245, 124, 0), rgb(255, 87, 34));"></div>
+</div>
+</div>
+</div>
+<!-- Navigation Links Panel -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xs shadow-sm flex flex-col gap-space-2xs">
+<nav class="flex flex-col gap-space-2xs">
+<!-- Active Portal Tab -->
+<a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg bg-primary-container text-on-primary font-label-md text-label-md transition-all" href="#" style="background: linear-gradient(135deg, rgb(245, 124, 0) 0%, rgb(255, 87, 34) 100%); color: rgb(255, 255, 255); box-shadow: rgba(245, 124, 0, 0.28) 0px 4px 12px;">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="">Dashboard</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-secondary-container" style="background-color: rgb(255, 224, 178); box-shadow: rgb(255, 204, 128) 0px 0px 8px;"></span>
+</a>
+<a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-label-md text-label-md transition-colors" href="#">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+<span class="">My Bookings</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface hover:bg-surface-container-low font-label-md text-label-md transition-colors" href="#">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary">car_rental</span>
+<span class="">Upcoming Rentals</span>
+</div>
+<span class="bg-secondary text-on-secondary font-label-sm text-[11px] px-2 py-0.5 rounded-full font-bold" style="background-color: rgb(255, 87, 34); color: rgb(255, 255, 255);">1</span>
+</a>
+<a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-label-md text-label-md transition-colors" href="#">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px]">history</span>
+<span class="">Rental History</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-label-md text-label-md transition-colors" href="#">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px]">bookmark_heart</span>
+<span class="">Saved Vehicles</span>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-[11px] px-2 py-0.5 rounded-full">4</span>
+</a>
+<div class="h-[1px] bg-surface-container my-space-2xs mx-space-xs"></div>
+<a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-label-md text-label-md transition-colors" href="#">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+<span class="">Profile &amp; Verification</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</a>
+<a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-label-md text-label-md transition-colors" href="#">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+<span class="">Invoices &amp; Receipts</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-label-md text-label-md transition-colors" href="#">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+<span class="">Support &amp; Concierge</span>
+</div>
+</a>
+</nav>
+<div class="mt-space-md pt-space-xs">
+<button class="w-full flex items-center justify-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-low text-error hover:bg-error-container/40 transition-colors font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">logout</span>
+<span class="">Sign Out</span>
+</button>
+</div>
+</div>
+<!-- Quick Assistance Pod -->
+<div class="bg-primary-container text-on-primary rounded-xl p-space-md shadow-sm flex flex-col gap-space-xs relative overflow-hidden" style="background: linear-gradient(145deg, rgb(230, 81, 0) 0%, rgb(191, 54, 12) 100%); color: rgb(255, 255, 255);">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 rounded-full bg-secondary/20 pointer-events-none"></div>
+<div class="flex items-center gap-space-xs text-secondary-container">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+<span class="font-label-sm text-label-sm font-bold tracking-wide uppercase">24/7 Roadside Assist</span>
+</div>
+<p class="font-body-sm text-[13px] text-primary-fixed-dim">Need instant vehicle re-assignment or express unlock?</p>
+<button class="mt-space-2xs self-start px-space-sm py-1.5 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm hover:bg-secondary/90 transition-colors flex items-center gap-space-2xs" style="background-color: rgb(255, 87, 34); color: rgb(255, 255, 255); box-shadow: rgba(255, 87, 34, 0.4) 0px 2px 6px;">
+<span class="">Connect Concierge</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- RIGHT DASHBOARD WORKSPACE -->
+<div class="col-span-12 lg:col-span-9 flex flex-col gap-space-lg">
+<!-- Portal Top Header & Actions -->
+<div class="flex flex-col sm:flex-row justify-between sm:items-center gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Client Portal</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fleet Hub: Manhattan Downtown</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Driver Control Center</h1>
+</div>
+<div class="flex items-center gap-space-xs">
+<a class="px-space-md py-space-xs bg-surface-container-lowest text-primary hover:bg-surface-container transition-colors rounded-lg font-label-md text-label-md flex items-center gap-space-2xs shadow-sm" href="#">
+<span class="material-symbols-outlined text-[18px]">key</span>
+<span class="">Digital Key Wallet</span>
+</a>
+<a class="px-space-md py-space-xs bg-primary text-on-primary hover:bg-primary-container transition-colors rounded-lg font-label-md text-label-md flex items-center gap-space-2xs shadow-sm" href="#" style="background: linear-gradient(135deg, rgb(245, 124, 0) 0%, rgb(255, 87, 34) 100%); color: rgb(255, 255, 255); box-shadow: rgba(245, 124, 0, 0.35) 0px 4px 14px;">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span class="">Reserve New Vehicle</span>
+</a>
+</div>
+</div>
+<!-- 2. FOUR METRIC STAT CARDS -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Metric 1: Active / Upcoming -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Upcoming Rentals</span>
+<div class="w-9 h-9 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">electric_car</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-md text-headline-md text-primary font-bold">1 Active</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-body-sm text-[12px] text-secondary font-medium">Pickup in 2 days</span>
+</div>
+</div>
+</div>
+<!-- Metric 2: Journeys Completed -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Total Trips</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">route</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-md text-headline-md text-primary font-bold">14 Journeys</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed-dim">trending_up</span>
+<span class="font-body-sm text-[12px]">3 trips in last 60 days</span>
+</div>
+</div>
+</div>
+<!-- Metric 3: Miles Traveled -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Total Distance</span>
+<div class="w-9 h-9 rounded-lg bg-primary-fixed flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-md text-headline-md text-primary font-bold">4,820 miles</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="font-body-sm text-[12px]">Zero safety violations</span>
+</div>
+</div>
+</div>
+<!-- Metric 4: Reward Balance -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Reward Credits</span>
+<div class="w-9 h-9 rounded-lg bg-tertiary-fixed/40 flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined text-[20px]">stars</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-md text-headline-md text-primary font-bold">1,250 Pts</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="font-label-sm text-[12px] text-secondary font-semibold">$25.00 rental credit</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. ACTIVE / UPCOMING RESERVATION HERO CARD -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col">
+<!-- Top Status Bar -->
+<div class="bg-primary-container text-on-primary px-space-lg py-space-sm flex flex-wrap items-center justify-between gap-space-xs" style="background: linear-gradient(135deg, rgb(245, 124, 0) 0%, rgb(255, 87, 34) 100%); color: rgb(255, 255, 255);">
+<div class="flex items-center gap-space-xs">
+<span class="flex h-2.5 w-2.5 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<span class="font-label-lg text-label-lg font-bold tracking-wide">Upcoming Reservation — Trip starts in 2 Days</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-wider">Booking Reference</span>
+<span class="font-label-md text-label-md font-mono bg-primary px-2.5 py-0.5 rounded text-white font-bold" style="background-color: rgba(0, 0, 0, 0.25); color: rgb(255, 255, 255);">#RR-984210</span>
+</div>
+</div>
+<!-- Core Vehicle & Booking Details -->
+<div class="p-space-lg grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<!-- Vehicle Image & Badges -->
+<div class="lg:col-span-5 flex flex-col gap-space-xs">
+<div class="relative w-full h-56 rounded-xl overflow-hidden bg-surface-container-low flex items-center justify-center">
+<img class="w-full h-full object-cover object-center" data-alt="Tata Nexon XZ Plus dual tone white with black roof compact SUV parked on scenic modern urban street with glass corporate towers in background clean automotive photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKtwqaC1i5x9XdgeN66_I2WTCGNA83765irT6V6YUIa-I4ekbD2U9WpvVKE98BPAcxWgZW3LHDCuMgoTw8UCSjyoy5sncxtI9MOVVxSnMq6-PtAuwPSbr9lU6HgLJ7YtthhVdKRYMsrtgVs90MV1XPhmWRy4MWGGjNgmVbt60dLQecrdUzQC5YKFCIbPiFUszz4Gx1R8xnNusRuoVrHBWPp67tjx1aFvGh0x2mpsi0povnNf7jw04g">
+<div class="absolute top-3 left-3 bg-primary/90 text-on-primary px-2.5 py-1 rounded-full font-label-sm text-[11px] font-semibold backdrop-blur-sm">
+                Compact SUV
+              </div>
+<div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 text-primary px-2.5 py-1 rounded-lg font-label-sm text-[11px] font-semibold backdrop-blur-sm shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">ev_station</span>
+                Turbo Petrol
+              </div>
+</div>
+<!-- Vehicle Spec Chips -->
+<div class="flex items-center justify-between gap-space-2xs pt-1">
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-full font-label-sm text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">airline_seat_recline_normal</span>
+<span class="">5 Seats</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-full font-label-sm text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">settings</span>
+<span class="">Auto AMT</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-full font-label-sm text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">luggage</span>
+<span class="">350L Boot</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-full font-label-sm text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">speed</span>
+<span class="">Unlimited Mi</span>
+</div>
+</div>
+</div>
+<!-- Schedule, Location & Financials -->
+<div class="lg:col-span-7 flex flex-col justify-between gap-space-md">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Tata Nexon XZ+ Dual Tone</h3>
+<span class="font-body-sm text-[14px] text-on-surface-variant">Registration: NY-8821-EXP • Keyless Ready</span>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">$251.40</span>
+<div class="flex items-center justify-end gap-1 text-tertiary-container font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[14px]">task_alt</span>
+<span class="">Paid in full</span>
+</div>
+</div>
+</div>
+<!-- Pickup & Return Itinerary Tracker -->
+<div class="mt-space-md bg-surface-container-low rounded-xl p-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-sm relative">
+<div class="flex items-start gap-space-xs w-full sm:w-1/2">
+<div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">flight_takeoff</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-on-surface-variant">Pickup Schedule</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Oct 24, 2025 • 10:00 AM</span>
+<span class="font-body-sm text-[12px] text-outline truncate">Downtown Manhattan Hub (Hudson Sq)</span>
+</div>
+</div>
+<div class="hidden sm:flex items-center justify-center text-outline-variant px-space-xs">
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</div>
+<div class="flex items-start gap-space-xs w-full sm:w-1/2">
+<div class="w-8 h-8 rounded-full bg-primary-container/10 flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">flight_land</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-on-surface-variant">Return Schedule</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Oct 27, 2025 • 06:00 PM</span>
+<span class="font-body-sm text-[12px] text-outline truncate">Downtown Manhattan Hub (Hudson Sq)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Hub Telematics & Prep Status -->
+<div class="flex flex-wrap items-center justify-between gap-space-xs pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                  Confirmed &amp; Prepared
+                </span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Bay #14 • Cleaned &amp; Inspected</span>
+</div>
+<!-- Quick Actions -->
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-variant font-label-md text-label-md transition-colors">
+                  Modify
+                </button>
+<button class="px-space-sm py-2 rounded-lg text-error hover:bg-error-container/40 font-label-md text-label-md transition-colors">
+                  Cancel
+                </button>
+<button class="px-space-md py-2 rounded-lg bg-secondary text-on-secondary hover:bg-secondary/90 shadow-sm font-label-md text-label-md transition-colors flex items-center gap-1.5" style="background: linear-gradient(135deg, rgb(245, 124, 0) 0%, rgb(255, 87, 34) 100%); color: rgb(255, 255, 255); box-shadow: rgba(255, 87, 34, 0.35) 0px 4px 12px;">
+<span class="material-symbols-outlined text-[18px]">passkey</span>
+<span class="">Digital Pass &amp; Key</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Telematics Readiness Checklist Bar -->
+<div class="bg-surface-container-low/60 px-space-lg py-space-xs flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md text-body-sm text-[12px] text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">security</span> Comprehensive Protection active</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">phonelink_lock</span> Bluetooth Mobile Key enabled</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">local_gas_station</span> Fuel level: 100% Pre-charged</span>
+</div>
+<a class="font-label-sm text-label-sm text-secondary hover:underline flex items-center gap-0.5" href="#">
+<span class="">View pickup instructions</span>
+<span class="material-symbols-outlined text-[14px]">north_east</span>
+</a>
+</div>
+</div>
+<!-- 4. RECENT RENTAL HISTORY SECTION -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">Past Rental Records</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Review completed journeys, download commercial tax invoices, or book the same fleet model.</span>
+</div>
+<a class="font-label-md text-label-md text-secondary hover:underline flex items-center gap-1" href="#">
+<span class="">View all 14 trips</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Rental History Cards Table Replacement for Responsiveness and Visual Polish -->
+<div class="flex flex-col gap-space-sm">
+<!-- Past Trip 1: Royal Enfield Classic 350 -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-16 h-14 rounded-lg bg-surface-container-lowest flex items-center justify-center shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Classic cruiser motorcycle Royal Enfield 350 chrome and matte black studio view high contrast lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5dm7O6eHD3FjPeBSrw78sKYbKC0iM4_fQAjH4Ck9-vWxARnowfVd70i3c2hRy4YvBf1wzomZstrdy4IVyztEpESs4-ZuU52ooKXRZxcQMG_8Yp1a4A7lDopZzaECsZaslj4hVqcm4AXGUu3pBQiJ82FyRwukkgdDFu2UzN_7zPFm2LMtj0zSAAzIAUhIpmcu8HN2KE3kWuxJxNTFv7gfqZVQwpSU8RQR5cq3lYfolgSWomGi6MLvc">
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-primary font-bold truncate">Royal Enfield Classic 350</span>
+<span class="px-2 py-0.5 bg-surface-container-high rounded text-[10px] font-label-sm text-on-surface-variant uppercase font-bold">Motorbike</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs text-body-sm text-[13px] text-on-surface-variant mt-0.5">
+<span class="">Sep 12 – Sep 14, 2025</span>
+<span class="">•</span>
+<span class="">Brooklyn Hub (DUMBO)</span>
+<span class="">•</span>
+<span class="font-mono text-outline font-semibold">#RR-831092</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-lg shrink-0">
+<div class="flex flex-col md:items-end">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">$105.00</span>
+<span class="inline-flex items-center gap-1 text-[12px] font-label-sm text-tertiary-container font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+                  Completed
+                </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-variant transition-colors" title="Download Official Commercial Invoice">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-colors font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+<span class="">Rent Again</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Past Trip 2: Hyundai i20 Sportz -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-16 h-14 rounded-lg bg-surface-container-lowest flex items-center justify-center shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Silver Hyundai i20 hatchback parked in modern airport pickup zone sleek automotive front quarter perspective" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi1jPU2rR7BGPZQ-p2dR-alUk72oqyCkRfwmxICOeTBjNmp1P90IQz00tPjmTUyhl0J-Cy_Q36xgMlJaPmuSC3pAznAMFBKa1l9_mdlo1ORMlUUXSfhWtlXANuhOhSOoU4mch85plYwNHmx65LexEEMGgJjb6Df23A1XOCY0CFv-GSCpgZDQPIxVo1E7aDLkRlpDJq9jvCmqZH37uycH-CHJyp-2eBUUIN8PnnnKHe9sCvLj3YkdQV">
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-primary font-bold truncate">Hyundai i20 Sportz</span>
+<span class="px-2 py-0.5 bg-surface-container-high rounded text-[10px] font-label-sm text-on-surface-variant uppercase font-bold">Hatchback</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs text-body-sm text-[13px] text-on-surface-variant mt-0.5">
+<span class="">Aug 01 – Aug 04, 2025</span>
+<span class="">•</span>
+<span class="">JFK International Airport Hub</span>
+<span class="">•</span>
+<span class="font-mono text-outline font-semibold">#RR-774102</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-lg shrink-0">
+<div class="flex flex-col md:items-end">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">$162.00</span>
+<span class="inline-flex items-center gap-1 text-[12px] font-label-sm text-tertiary-container font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+                  Completed
+                </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-variant transition-colors" title="Download Official Commercial Invoice">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-colors font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+<span class="">Rent Again</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Past Trip 3: Honda Activa 6G -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-16 h-14 rounded-lg bg-surface-container-lowest flex items-center justify-center shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Pearl blue modern automatic motor scooter Honda Activa urban studio shot crisp clean product lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYnxziIk39R_HL6jmZt3AhewHNh-Ub1MBVA-M85ruAHwcvsJ8vUJ67R8LdGgYruRipqKSHHRi7edg1WgBTkWT5fd4ixifiinPd5VsG4ys0nXUQLYIEqMxir08gO0pLUQ1JqSAJEv4uvyeqIH4NPhZX9Nf-uaRlgY5VVQ36bRkajmPqxhk0QhYIqjeLwLbOk-EwBccQ1Y-ciGGv9WgblhaeHfVFNMi98ANv1CU5ZfwgUFq7SICkIZ0V">
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-primary font-bold truncate">Honda Activa 6G</span>
+<span class="px-2 py-0.5 bg-surface-container-high rounded text-[10px] font-label-sm text-on-surface-variant uppercase font-bold">Urban Scooter</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs text-body-sm text-[13px] text-on-surface-variant mt-0.5">
+<span class="">Jul 15, 2025 • Single-Day Express</span>
+<span class="">•</span>
+<span class="">Manhattan Downtown</span>
+<span class="">•</span>
+<span class="font-mono text-outline font-semibold">#RR-692183</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-lg shrink-0">
+<div class="flex flex-col md:items-end">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">$22.00</span>
+<span class="inline-flex items-center gap-1 text-[12px] font-label-sm text-tertiary-container font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+                  Completed
+                </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-variant transition-colors" title="Download Official Commercial Invoice">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-colors font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+<span class="">Rent Again</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. RECOMMENDED FLEET PICKS (Weekend Suggestions) -->
+<div class="flex flex-col gap-space-sm mb-space-lg">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">Curated Suggestions</span>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">Recommended for Your Next Weekend Escape</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Selected based on your preference for agile urban &amp; scenic road trips</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Recommendation 1: BMW G 310 GS Adventure -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col justify-between gap-space-md group hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="relative w-full h-48 rounded-xl overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="BMW G 310 GS adventure touring motorcycle red and black livery on mountain highway pass sunny cinematic look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd17shcyCffSs1KbKqYuWEtVYP7yPw995rKi2ttTEDSsKkxx2u2jMOiGdRIyg_3gBnniU5RN1iGWafNjSSdp7SnvNO3YxR9eh-isVUox-gkxysvbHkEd-z2W2zcmmcqbt6JsaSZCva_7jBwm18U6WXgUaSB_TulUD2kcfxQDBDDtaRte6JVx0aIQiVDyEfDo5LS18ri2Vs-iLGw4vMcXf7YUXxxvm8tjbFhIGPrVq6CvjTvhirjzdn">
+<div class="absolute top-3 left-3 bg-primary text-on-primary px-2.5 py-1 rounded-full font-label-sm text-[11px] font-semibold">
+                  Dual-Sport Touring
+                </div>
+<div class="absolute top-3 right-3 bg-surface-container-lowest/90 text-primary p-1.5 rounded-full backdrop-blur-sm cursor-pointer hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</div>
+</div>
+<div class="flex items-start justify-between mt-space-2xs">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">BMW G 310 GS Adventure</h3>
+<span class="font-body-sm text-[13px] text-on-surface-variant">313cc • Dual ABS • Pannier Ready</span>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">$68</span>
+<span class="font-body-sm text-[12px] text-outline">/day</span>
+</div>
+</div>
+<!-- Quick Specs -->
+<div class="flex items-center gap-space-2xs mt-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-[11px] text-on-surface-variant">34 HP</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-[11px] text-on-surface-variant">11L Fuel Cap</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-[11px] text-on-surface-variant">Brooklyn Hub</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<button class="flex-1 py-2.5 rounded-lg bg-secondary text-on-secondary hover:bg-secondary/90 font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5 shadow-sm" style="background: linear-gradient(135deg, rgb(245, 124, 0) 0%, rgb(255, 87, 34) 100%); color: rgb(255, 255, 255); box-shadow: rgba(245, 124, 0, 0.35) 0px 4px 12px;">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="">Instant Weekend Rent</span>
+</button>
+<button class="p-2.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-variant transition-colors" title="Compare specifications">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Recommendation 2: Mahindra Thar 4x4 Convertible -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col justify-between gap-space-md group hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="relative w-full h-48 rounded-xl overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Mahindra Thar rugged 4x4 convertible offroad vehicle mystic black color parked on forest trail overcast dramatic lighting automotive look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjjzocuaI1SKnSzM3aDqOybKQiehwuYwqw4UTbnCK98-RsCe6UQOhORUNDVOPQbjiQBShzqRuyjlkwALshYj7pwx34b1G7YAuUXKJAvzKf-iK0nulJvLMPxBFhw0KNT29KjORJC966lau81OKOeG_5SqBmrtsSwX6baEhueOsOsGVrkGEvPRz1BCql9lVUKJxMzJxgyXsX549zytTlyb3zidMwNahBJ0Dq51_D1416SMpGlNmQjw4y">
+<div class="absolute top-3 left-3 bg-primary text-on-primary px-2.5 py-1 rounded-full font-label-sm text-[11px] font-semibold">
+                  All-Terrain 4x4
+                </div>
+<div class="absolute top-3 right-3 bg-surface-container-lowest/90 text-primary p-1.5 rounded-full backdrop-blur-sm cursor-pointer hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</div>
+</div>
+<div class="flex items-start justify-between mt-space-2xs">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Mahindra Thar Hard-Top 4WD</h3>
+<span class="font-body-sm text-[13px] text-on-surface-variant">2.2L mHawk Diesel • 4 Seater • Off-Road</span>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">$94</span>
+<span class="font-body-sm text-[12px] text-outline">/day</span>
+</div>
+</div>
+<!-- Quick Specs -->
+<div class="flex items-center gap-space-2xs mt-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-[11px] text-on-surface-variant">Automatic</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-[11px] text-on-surface-variant">High-Ground Clearance</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-[11px] text-on-surface-variant">JFK Hub</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<button class="flex-1 py-2.5 rounded-lg bg-secondary text-on-secondary hover:bg-secondary/90 font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5 shadow-sm" style="background: linear-gradient(135deg, rgb(245, 124, 0) 0%, rgb(255, 87, 34) 100%); color: rgb(255, 255, 255); box-shadow: rgba(245, 124, 0, 0.35) 0px 4px 12px;">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="">Instant Weekend Rent</span>
+</button>
+<button class="p-2.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-variant transition-colors" title="Compare specifications">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div>
+
+</body></html>
