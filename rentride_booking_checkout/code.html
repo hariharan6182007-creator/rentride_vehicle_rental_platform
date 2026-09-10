@@ -68,9 +68,7 @@
 <div class="flex flex-col gap-space-2xs">
 <label class="font-label-md text-label-md text-on-surface-variant">Legal Full Name</label>
 <div class="relative flex items-center">
-<input class="w-full h-12 px-space-sm bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary/30" type="text" value="Alexander Wright"/>
-<span class="material-symbols-outlined absolute right-3 text-secondary text-[20px]">verified</span>
-</div>
+<input id="driver-name" class="w-full h-12 px-space-sm bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary/30" type="text" value="Alexander Wright"/>
 </div>
 <div class="flex flex-col gap-space-2xs">
 <label class="font-label-md text-label-md text-on-surface-variant">Corporate Email Address</label>
@@ -122,7 +120,7 @@
 <div class="mt-space-xs flex items-center justify-between text-on-surface font-label-md">
 <div class="flex items-center gap-space-2xs">
 <span class="material-symbols-outlined text-[16px] text-outline">calendar_today</span>
-<span class="font-label-md text-label-md">Oct 24, 2025</span>
+<input id="pickup-date" class="bg-transparent font-label-md text-label-md text-primary" type="date" value="2025-10-24"/>
 </div>
 <span class="bg-surface-container px-space-xs py-space-2xs rounded text-primary font-label-sm">10:00 AM</span>
 </div>
@@ -141,7 +139,7 @@
 <div class="mt-space-xs flex items-center justify-between text-on-surface font-label-md">
 <div class="flex items-center gap-space-2xs">
 <span class="material-symbols-outlined text-[16px] text-outline">calendar_month</span>
-<span class="font-label-md text-label-md">Oct 27, 2025</span>
+<input id="return-date" class="bg-transparent font-label-md text-label-md text-primary" type="date" value="2025-10-27"/>
 </div>
 <span class="bg-surface-container px-space-xs py-space-2xs rounded text-primary font-label-sm">06:00 PM</span>
 </div>
@@ -163,7 +161,7 @@
 <label class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between cursor-pointer transition hover:bg-surface-container-low">
 <div class="flex items-start justify-between">
 <span class="material-symbols-outlined text-outline text-[20px]">airline_seat_recline_extra</span>
-<input class="w-4 h-4 rounded text-secondary accent-secondary" type="checkbox"/>
+<input class="w-4 h-4 rounded text-secondary accent-secondary" data-addon="childSeat" type="checkbox"/>
 </div>
 <div class="mt-space-sm">
 <p class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Child Safety Seat</p>
@@ -175,7 +173,7 @@
 <label class="p-space-sm rounded-xl bg-surface-container shadow-md flex flex-col justify-between cursor-pointer ring-2 ring-secondary">
 <div class="flex items-start justify-between">
 <span class="material-symbols-outlined text-secondary text-[20px]">group_add</span>
-<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary" type="checkbox"/>
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary" data-addon="additionalDriver" type="checkbox"/>
 </div>
 <div class="mt-space-sm">
 <p class="font-label-md text-label-md text-primary font-bold leading-tight">Additional Driver</p>
@@ -187,7 +185,7 @@
 <label class="p-space-sm rounded-xl bg-surface-container shadow-md flex flex-col justify-between cursor-pointer ring-2 ring-secondary">
 <div class="flex items-start justify-between">
 <span class="material-symbols-outlined text-secondary text-[20px]">security</span>
-<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary" type="checkbox"/>
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary" data-addon="zeroDeductible" type="checkbox"/>
 </div>
 <div class="mt-space-sm">
 <p class="font-label-md text-label-md text-primary font-bold leading-tight">Zero-Deductible</p>
@@ -227,60 +225,20 @@
 <span>Pay on Site</span>
 </button>
 </div>
-<!-- Credit Card Fields -->
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
-<div class="sm:col-span-2 flex flex-col gap-space-2xs">
-<label class="font-label-md text-label-md text-on-surface-variant">Card Number</label>
-<div class="relative flex items-center">
-<input class="w-full h-12 px-space-sm bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary/30" placeholder="4532 •••• •••• 8912" type="text" value="4532 8901 2341 8912"/>
-<div class="absolute right-3 flex items-center gap-space-2xs text-secondary font-label-sm font-bold">
-<span>VISA</span>
-</div>
-</div>
-</div>
-<div class="flex flex-col gap-space-2xs">
-<label class="font-label-md text-label-md text-on-surface-variant">Expiration Date</label>
-<input class="w-full h-12 px-space-sm bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary/30" placeholder="MM / YY" type="text" value="08 / 28"/>
-</div>
-<div class="flex flex-col gap-space-2xs">
-<div class="flex items-center justify-between">
-<label class="font-label-md text-label-md text-on-surface-variant">Security Code (CVV)</label>
-<span class="material-symbols-outlined text-[16px] text-outline" title="3 digits on back">help_outline</span>
-</div>
-<input class="w-full h-12 px-space-sm bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary/30" placeholder="•••" type="password" value="842"/>
-</div>
-<div class="sm:col-span-2 flex flex-col gap-space-2xs">
-<label class="font-label-md text-label-md text-on-surface-variant">Cardholder Legal Name</label>
-<input class="w-full h-12 px-space-sm bg-surface-container-lowest text-on-surface font-body-md text-body-md uppercase rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary/30" type="text" value="ALEXANDER WRIGHT"/>
-</div>
-</div>
 </section>
-<!-- PRIMARY ACTION BUTTON & TERMS -->
 <div class="flex flex-col gap-space-xs">
-<button id="confirm-booking-btn" class="w-full h-14 bg-primary text-on-primary rounded-lg font-headline-sm text-headline-sm hover:bg-primary-container transition shadow-lg flex items-center justify-center gap-space-sm">
+<button id="confirm-booking-btn" class="w-full h-14 bg-primary text-on-primary rounded-lg font-headline-sm text-headline-sm hover:bg-primary-container transition shadow-lg flex items-center justify-center gap-space-sm" type="button">
 <span>Confirm Booking &amp; Reserve Vehicle</span>
 <span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
 <span id="checkout-total" class="font-headline-sm text-headline-sm font-bold text-secondary-container">$251.40</span>
 </button>
-<p class="font-body-sm text-body-sm text-outline text-center">
-          By clicking confirm, you agree to the RentRide Master Rental Agreement, Cancellation Policy, and zero-liability insurance stipulations.
-        </p>
+<p id="booking-error" class="hidden font-body-sm text-body-sm text-error text-center" role="alert"></p>
 </div>
 </div>
-<!-- RIGHT COLUMN: Vehicle Specs & Financial Breakdown (approx. 40% -> 5 cols) -->
 <div class="lg:col-span-5 flex flex-col gap-space-lg sticky top-20">
-<!-- SECTION 4: SELECTED VEHICLE CARD -->
 <div class="bg-surface-container-lowest rounded-xl shadow-md overflow-hidden flex flex-col">
-<!-- Vehicle Image Header -->
 <div class="relative w-full h-56 bg-surface-container-low overflow-hidden flex items-center justify-center">
-<img class="w-full h-full object-cover" data-alt="Modern pearl white compact crossover SUV car parked diagonally in a sleek minimalist architectural studio with cool blue subtle reflections, high contrast commercial automotive studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCokA4Q8LT4sRKeSfJ_Thpcw1kcbiRxMabxskPV9Sr_FpwRnIMS0XgHmiNha6DFixqc7DsO17xq5MeGADQM52HuPpQFmR2mb18lhELqrJZj0yWSa9NUcWTQ2bzSbSAOb47XWjaE1nw9godlv6MVmjk2TmYPUdbBAQupBjnWq0WObIolSO142_Tq1M0OrxTSyrMdAvzaEDrUd3JOOPhECges6Xnn7aDG79M_Tv63l2nekdAhn3VhoaCf"/>
-<div class="absolute top-space-sm left-space-sm">
-<span class="bg-primary text-on-primary font-label-sm text-label-sm px-space-xs py-space-2xs rounded-full uppercase tracking-wider font-bold shadow-md">
-              Compact SUV
-            </span>
-</div>
-<div class="absolute bottom-space-xs right-space-sm bg-surface-container-lowest/90 backdrop-blur-sm px-space-xs py-space-2xs rounded-md shadow-sm">
-<span class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-space-2xs">
+<img class="w-full h-full object-cover" alt="Selected rental vehicle" src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
 <span class="material-symbols-outlined text-[16px]">bolt</span> Instant Pickup Ready
             </span>
 </div>
@@ -325,16 +283,16 @@
 </div>
 <div class="flex flex-col gap-space-xs font-body-sm text-body-sm">
 <div class="flex justify-between items-center text-on-surface">
-<span>Base Rental (3 Days @ $58.00/day)</span>
-<span class="font-label-md text-label-md font-semibold text-primary">$174.00</span>
+<span>Base Rental (<span id="rental-days">3</span> Days)</span>
+<span id="base-rental-total" class="font-label-md text-label-md font-semibold text-primary">$174.00</span>
 </div>
 <div class="flex justify-between items-center text-on-surface">
-<span>Additional Authorized Driver (3 Days)</span>
-<span class="font-label-md text-label-md font-semibold text-primary">$45.00</span>
+<span>Additional Authorized Driver</span>
+<span id="additional-driver-total" class="font-label-md text-label-md font-semibold text-primary">$45.00</span>
 </div>
 <div class="flex justify-between items-center text-on-surface">
-<span>Full Zero-Deductible Cover (3 Days)</span>
-<span class="font-label-md text-label-md font-semibold text-primary">$54.00</span>
+<span>Full Zero-Deductible Cover</span>
+<span id="zero-deductible-total" class="font-label-md text-label-md font-semibold text-primary">$54.00</span>
 </div>
 <div class="flex justify-between items-center text-on-surface">
 <span>Facility Hygiene &amp; Disinfection Prep</span>
@@ -342,7 +300,7 @@
 </div>
 <div class="flex justify-between items-center text-on-surface">
 <span>State Surcharges &amp; Port Highway Taxes</span>
-<span class="font-label-md text-label-md font-semibold text-primary">$23.40</span>
+<span id="surcharge-total" class="font-label-md text-label-md font-semibold text-primary">$23.40</span>
 </div>
 <div class="flex justify-between items-center text-secondary font-semibold">
 <div class="flex items-center gap-space-2xs">
@@ -399,60 +357,43 @@
 </div>
 </div>
 </div>
-</div></main></div><script>
+</div></div></div></main></div><script>
   const queryParams = new URLSearchParams(window.location.search);
   const vehicleId = queryParams.get('vehicleId') || '1';
-
-  const setText = (id, value) => {
-    const element = document.getElementById(id);
-    if (element) element.textContent = value;
+  const addOnPrices = { additionalDriver: 15, zeroDeductible: 18, childSeat: 12 };
+  let selectedVehicle;
+  const setText = (id, value) => { const element = document.getElementById(id); if (element) element.textContent = value; };
+  const rentalDays = () => Math.max(1, Math.ceil((new Date(`${returnDate.value}T00:00:00`) - new Date(`${pickupDate.value}T00:00:00`)) / 86400000));
+  const updateTotal = () => {
+    if (!selectedVehicle) return;
+    const days = rentalDays();
+    const selected = [...document.querySelectorAll('[data-addon]:checked')].map((input) => input.dataset.addon);
+    const extras = selected.reduce((sum, item) => sum + addOnPrices[item] * days, 0);
+    const total = selectedVehicle.pricePerDay * days + extras + 23.4 - 45;
+    setText('rental-days', days); setText('base-rental-total', `$${(selectedVehicle.pricePerDay * days).toFixed(2)}`);
+    setText('additional-driver-total', `$${(selected.includes('additionalDriver') ? 15 * days : 0).toFixed(2)}`);
+    setText('zero-deductible-total', `$${(selected.includes('zeroDeductible') ? 18 * days : 0).toFixed(2)}`);
+    setText('checkout-total', `$${total.toFixed(2)}`); setText('checkout-total-display', `$${total.toFixed(2)}`);
   };
-
+  const pickupDate = document.getElementById('pickup-date');
+  const returnDate = document.getElementById('return-date');
   async function loadVehicle() {
     try {
-      const response = await fetch(`/api/vehicles/${vehicleId}`);
-      if (!response.ok) throw new Error('Vehicle not found');
-      const vehicle = await response.json();
-
-      setText('checkout-vehicle-name', vehicle.name);
-      setText('checkout-vehicle-tag', `${vehicle.type} • ${vehicle.transmission} • ${vehicle.seats} seats`);
-      setText('checkout-fleet-id', `Fleet #${vehicle.id.toString().padStart(3, '0')}`);
-
-      const total = vehicle.pricePerDay * 3 + 45 + 54 + 23.4 - 45;
-      const amount = `$${total.toFixed(2)}`;
-      setText('checkout-total', amount);
-      setText('checkout-total-display', amount);
-
-      const bookingButton = document.getElementById('confirm-booking-btn');
-      if (bookingButton) {
-        bookingButton.addEventListener('click', async () => {
-          const payload = {
-            name: 'Alex Wright',
-            vehicleId: Number(vehicleId),
-            pickupDate: '2025-10-24',
-            returnDate: '2025-10-27'
-          };
-
-          const bookingResponse = await fetch('/api/booking', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-          });
-
-          if (!bookingResponse.ok) {
-            alert('Booking failed. Please try again.');
-            return;
-          }
-
-          window.location.href = '/confirmation';
-        });
-      }
-    } catch (error) {
-      console.error(error);
-      setText('checkout-vehicle-name', 'Selected Vehicle');
-      setText('checkout-vehicle-tag', 'Unable to load vehicle details');
-    }
+      const response = await fetch(`/api/vehicles/${vehicleId}`); if (!response.ok) throw new Error('Vehicle not found');
+      selectedVehicle = await response.json();
+      setText('checkout-vehicle-name', selectedVehicle.name); setText('checkout-vehicle-tag', `${selectedVehicle.type} • ${selectedVehicle.transmission} • ${selectedVehicle.seats} seats`); setText('checkout-fleet-id', `Fleet #${selectedVehicle.id.toString().padStart(3, '0')}`);
+      document.querySelectorAll('[data-addon], #pickup-date, #return-date').forEach((input) => input.addEventListener('change', updateTotal)); updateTotal();
+    } catch (error) { setText('checkout-vehicle-name', 'Selected Vehicle'); setText('checkout-vehicle-tag', 'Unable to load vehicle details'); }
   }
-
+  document.getElementById('confirm-booking-btn').addEventListener('click', async (event) => {
+    const errorMessage = document.getElementById('booking-error'); const name = document.getElementById('driver-name').value.trim();
+    if (!name || !pickupDate.value || !returnDate.value || new Date(returnDate.value) <= new Date(pickupDate.value)) { errorMessage.textContent = 'Enter your name and choose a valid return date after pickup.'; errorMessage.classList.remove('hidden'); return; }
+    event.currentTarget.disabled = true;
+    try {
+      const response = await fetch('/api/booking', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, vehicleId: Number(vehicleId), pickupDate: pickupDate.value, returnDate: returnDate.value, addOns: [...document.querySelectorAll('[data-addon]:checked')].map((input) => input.dataset.addon) }) });
+      const result = await response.json(); if (!response.ok) throw new Error(result.error || 'Booking failed.');
+      sessionStorage.setItem('rentride:lastBooking', JSON.stringify(result.booking)); window.location.href = '/confirmation';
+    } catch (error) { errorMessage.textContent = error.message; errorMessage.classList.remove('hidden'); event.currentTarget.disabled = false; }
+  });
   loadVehicle();
 </script></body></html>

@@ -71,7 +71,7 @@
 </div>
 <div class="flex flex-col flex-1 w-full gap-space-xs">
 <div class="flex items-center justify-between flex-wrap gap-2">
-<h2 class="font-headline-md text-headline-md text-primary">Tata Nexon XZ+ Dual Tone</h2>
+<h2 id="confirmedVehicleName" class="font-headline-md text-headline-md text-primary">Tata Nexon XZ+ Dual Tone</h2>
 <div class="flex items-center gap-space-2xs bg-tertiary-fixed/40 text-tertiary-container px-space-xs py-[2px] rounded-full">
 <span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></span>
 <span class="font-label-sm text-label-sm font-semibold">Ready for Pickup</span>
@@ -111,7 +111,7 @@
 <p class="font-body-sm text-body-sm text-on-surface-variant">450 Hudson St, New York, NY 10014 (Bay B-12)</p>
 <div class="mt-space-xs bg-surface-container-lowest p-space-xs rounded-lg flex items-center gap-space-xs">
 <span class="material-symbols-outlined text-[18px] text-primary">calendar_clock</span>
-<span class="font-label-md text-label-md text-primary font-semibold">Friday, Oct 24, 2025 • 10:00 AM</span>
+<span id="confirmedPickupDate" class="font-label-md text-label-md text-primary font-semibold">Friday, Oct 24, 2025 • 10:00 AM</span>
 </div>
 </div>
 <!-- Return Station Box -->
@@ -124,7 +124,7 @@
 <p class="font-body-sm text-body-sm text-on-surface-variant">450 Hudson St, New York, NY 10014 (Key Drop Box 04)</p>
 <div class="mt-space-xs bg-surface-container-lowest p-space-xs rounded-lg flex items-center gap-space-xs">
 <span class="material-symbols-outlined text-[18px] text-primary">event_available</span>
-<span class="font-label-md text-label-md text-primary font-semibold">Monday, Oct 27, 2025 • 06:00 PM</span>
+<span id="confirmedReturnDate" class="font-label-md text-label-md text-primary font-semibold">Monday, Oct 27, 2025 • 06:00 PM</span>
 </div>
 </div>
 </div>
@@ -237,7 +237,7 @@
 <span class="font-label-lg text-label-lg text-primary font-bold">Total Settled</span>
 <span class="font-body-sm text-[12px] text-on-surface-variant">Includes all municipal taxes</span>
 </div>
-<span class="font-headline-lg text-headline-lg text-primary font-extrabold">$251.40</span>
+<span id="confirmedTotal" class="font-headline-lg text-headline-lg text-primary font-extrabold">$251.40</span>
 </div>
 <div class="flex items-center gap-space-xs bg-surface-container-low p-space-xs rounded-lg">
 <span class="material-symbols-outlined text-primary text-[20px]">credit_card</span>
@@ -308,8 +308,19 @@
 </div>
 </div>
 <script>
+    const booking = JSON.parse(sessionStorage.getItem('rentride:lastBooking') || 'null');
+    const formatDate = (date) => new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'short', day: 'numeric', year: 'numeric' }).format(new Date(`${date}T12:00:00`));
+
+    if (booking) {
+      document.getElementById('bookingIdText').textContent = `#${booking.reference}`;
+      document.getElementById('confirmedVehicleName').textContent = booking.vehicleName;
+      document.getElementById('confirmedPickupDate').textContent = `${formatDate(booking.pickupDate)} • 10:00 AM`;
+      document.getElementById('confirmedReturnDate').textContent = `${formatDate(booking.returnDate)} • 06:00 PM`;
+      document.getElementById('confirmedTotal').textContent = `$${booking.total.toFixed(2)}`;
+    }
+
     function copyBookingId() {
-      const bookingId = "#RR-984210";
+      const bookingId = document.getElementById('bookingIdText').textContent;
       navigator.clipboard.writeText(bookingId).then(() => {
         const toast = document.getElementById('copyToast');
         if (toast) {

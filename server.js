@@ -72,10 +72,18 @@ app.get('/api/vehicles/:id', (req, res) => {
 });
 
 app.post('/api/booking', (req, res) => {
-  const { name, vehicleId, pickupDate, returnDate } = req.body;
+  const { name, vehicleId, pickupDate, returnDate, addOns = [] } = req.body;
 
   if (!name || !vehicleId || !pickupDate || !returnDate) {
     return res.status(400).json({ error: 'Missing required booking fields' });
+  }
+
+  const pickup = new Date(`${pickupDate}T00:00:00Z`);
+  const returnDay = new Date(`${returnDate}T00:00:00Z`);
+  const rentalDays = Math.ceil((returnDay - pickup) / 86400000);
+
+  if (!Number.isFinite(rentalDays) || rentalDays < 1) {
+    return res.status(400).json({ error: 'Return date must be after pickup date' });
   }
 
   const vehicle = vehicles.find((item) => item.id === Number(vehicleId));
@@ -84,15 +92,24 @@ app.post('/api/booking', (req, res) => {
     return res.status(404).json({ error: 'Vehicle not found' });
   }
 
+  const addOnPrices = { additionalDriver: 15, zeroDeductible: 18, childSeat: 12 };
+  const selectedAddOns = Array.isArray(addOns) ? addOns.filter((item) => addOnPrices[item]) : [];
+  const addOnTotal = selectedAddOns.reduce((total, item) => total + addOnPrices[item] * rentalDays, 0);
+  const total = vehicle.pricePerDay * rentalDays + addOnTotal + 23.4 - 45;
+  const reference = `RR-${Date.now().toString().slice(-6)}`;
+
   return res.status(201).json({
     message: 'Booking created successfully',
     booking: {
+      reference,
       customerName: name,
       vehicleId,
       vehicleName: vehicle.name,
       pickupDate,
       returnDate,
-      total: vehicle.pricePerDay * 3
+      rentalDays,
+      addOns: selectedAddOns,
+      total: Number(total.toFixed(2))
     }
   });
 });
